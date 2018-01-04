@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `rusoto_workspaces` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, rusoto_workspaces">
+
+    <title>rusoto_workspaces - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate rusoto_workspaces</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_workspaces', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_workspaces</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_workspaces/lib.rs.html#14-29' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p><fullname>Amazon WorkSpaces Service</fullname> <p>This reference provides detailed information about the Amazon WorkSpaces operations.</p></p>
+
+<p>If you&#39;re using the service, you&#39;re probably looking for <a href="struct.WorkspacesClient.html">WorkspacesClient</a> and <a href="trait.Workspaces.html">Workspaces</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComputeType.html"
+                                  title='struct rusoto_workspaces::ComputeType'>ComputeType</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the compute type of a WorkSpace bundle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTagsRequest.html"
+                                  title='struct rusoto_workspaces::CreateTagsRequest'>CreateTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request of the <a>CreateTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateTagsResult.html"
+                                  title='struct rusoto_workspaces::CreateTagsResult'>CreateTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of the <a>CreateTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::CreateWorkspacesRequest'>CreateWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>CreateWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::CreateWorkspacesResult'>CreateWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the result of the <a>CreateWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DefaultWorkspaceCreationProperties.html"
+                                  title='struct rusoto_workspaces::DefaultWorkspaceCreationProperties'>DefaultWorkspaceCreationProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains default WorkSpace creation information.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTagsRequest.html"
+                                  title='struct rusoto_workspaces::DeleteTagsRequest'>DeleteTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request of the <a>DeleteTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteTagsResult.html"
+                                  title='struct rusoto_workspaces::DeleteTagsResult'>DeleteTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of the <a>DeleteTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsRequest.html"
+                                  title='struct rusoto_workspaces::DescribeTagsRequest'>DescribeTagsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>The request of the <a>DescribeTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeTagsResult.html"
+                                  title='struct rusoto_workspaces::DescribeTagsResult'>DescribeTagsResult</a></td>
+                           <td class='docblock-short'>
+                                <p>The result of the <a>DescribeTags</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspaceBundlesRequest.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspaceBundlesRequest'>DescribeWorkspaceBundlesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DescribeWorkspaceBundles</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspaceBundlesResult.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspaceBundlesResult'>DescribeWorkspaceBundlesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DescribeWorkspaceBundles</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspaceDirectoriesRequest.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspaceDirectoriesRequest'>DescribeWorkspaceDirectoriesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DescribeWorkspaceDirectories</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspaceDirectoriesResult.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspaceDirectoriesResult'>DescribeWorkspaceDirectoriesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>DescribeWorkspaceDirectories</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspacesConnectionStatusRequest.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspacesConnectionStatusRequest'>DescribeWorkspacesConnectionStatusRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspacesConnectionStatusResult.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspacesConnectionStatusResult'>DescribeWorkspacesConnectionStatusResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspacesRequest'>DescribeWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>DescribeWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::DescribeWorkspacesResult'>DescribeWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results for the <a>DescribeWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailedCreateWorkspaceRequest.html"
+                                  title='struct rusoto_workspaces::FailedCreateWorkspaceRequest'>FailedCreateWorkspaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a WorkSpace that could not be created.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FailedWorkspaceChangeRequest.html"
+                                  title='struct rusoto_workspaces::FailedWorkspaceChangeRequest'>FailedWorkspaceChangeRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a WorkSpace that could not be rebooted (<a>RebootWorkspaces</a>), rebuilt (<a>RebuildWorkspaces</a>), terminated (<a>TerminateWorkspaces</a>), started (<a>StartWorkspaces</a>), or stopped (<a>StopWorkspaces</a>).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyWorkspacePropertiesRequest.html"
+                                  title='struct rusoto_workspaces::ModifyWorkspacePropertiesRequest'>ModifyWorkspacePropertiesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModifyWorkspacePropertiesResult.html"
+                                  title='struct rusoto_workspaces::ModifyWorkspacePropertiesResult'>ModifyWorkspacePropertiesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootRequest.html"
+                                  title='struct rusoto_workspaces::RebootRequest'>RebootRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information used with the <a>RebootWorkspaces</a> operation to reboot a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::RebootWorkspacesRequest'>RebootWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>RebootWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebootWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::RebootWorkspacesResult'>RebootWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>RebootWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebuildRequest.html"
+                                  title='struct rusoto_workspaces::RebuildRequest'>RebuildRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information used with the <a>RebuildWorkspaces</a> operation to rebuild a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebuildWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::RebuildWorkspacesRequest'>RebuildWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>RebuildWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RebuildWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::RebuildWorkspacesResult'>RebuildWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>RebuildWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartRequest.html"
+                                  title='struct rusoto_workspaces::StartRequest'>StartRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the start request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::StartWorkspacesRequest'>StartWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StartWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::StartWorkspacesResult'>StartWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopRequest.html"
+                                  title='struct rusoto_workspaces::StopRequest'>StopRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the stop request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::StopWorkspacesRequest'>StopWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.StopWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::StopWorkspacesResult'>StopWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Tag.html"
+                                  title='struct rusoto_workspaces::Tag'>Tag</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the tag of the WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateRequest.html"
+                                  title='struct rusoto_workspaces::TerminateRequest'>TerminateRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information used with the <a>TerminateWorkspaces</a> operation to terminate a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateWorkspacesRequest.html"
+                                  title='struct rusoto_workspaces::TerminateWorkspacesRequest'>TerminateWorkspacesRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the inputs for the <a>TerminateWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TerminateWorkspacesResult.html"
+                                  title='struct rusoto_workspaces::TerminateWorkspacesResult'>TerminateWorkspacesResult</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains the results of the <a>TerminateWorkspaces</a> operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UserStorage.html"
+                                  title='struct rusoto_workspaces::UserStorage'>UserStorage</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about the user storage for a WorkSpace bundle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Workspace.html"
+                                  title='struct rusoto_workspaces::Workspace'>Workspace</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspaceBundle.html"
+                                  title='struct rusoto_workspaces::WorkspaceBundle'>WorkspaceBundle</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a WorkSpace bundle.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspaceConnectionStatus.html"
+                                  title='struct rusoto_workspaces::WorkspaceConnectionStatus'>WorkspaceConnectionStatus</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the connection status of a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspaceDirectory.html"
+                                  title='struct rusoto_workspaces::WorkspaceDirectory'>WorkspaceDirectory</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about an AWS Directory Service directory for use with Amazon WorkSpaces.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspaceProperties.html"
+                                  title='struct rusoto_workspaces::WorkspaceProperties'>WorkspaceProperties</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the properties of a WorkSpace.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspaceRequest.html"
+                                  title='struct rusoto_workspaces::WorkspaceRequest'>WorkspaceRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Contains information about a WorkSpace creation request.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.WorkspacesClient.html"
+                                  title='struct rusoto_workspaces::WorkspacesClient'>WorkspacesClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon WorkSpaces API.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateTagsError.html"
+                                  title='enum rusoto_workspaces::CreateTagsError'>CreateTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateTags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateWorkspacesError.html"
+                                  title='enum rusoto_workspaces::CreateWorkspacesError'>CreateWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteTagsError.html"
+                                  title='enum rusoto_workspaces::DeleteTagsError'>DeleteTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteTags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeTagsError.html"
+                                  title='enum rusoto_workspaces::DescribeTagsError'>DescribeTagsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeTags</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeWorkspaceBundlesError.html"
+                                  title='enum rusoto_workspaces::DescribeWorkspaceBundlesError'>DescribeWorkspaceBundlesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeWorkspaceBundles</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeWorkspaceDirectoriesError.html"
+                                  title='enum rusoto_workspaces::DescribeWorkspaceDirectoriesError'>DescribeWorkspaceDirectoriesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeWorkspaceDirectories</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeWorkspacesConnectionStatusError.html"
+                                  title='enum rusoto_workspaces::DescribeWorkspacesConnectionStatusError'>DescribeWorkspacesConnectionStatusError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeWorkspacesConnectionStatus</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeWorkspacesError.html"
+                                  title='enum rusoto_workspaces::DescribeWorkspacesError'>DescribeWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ModifyWorkspacePropertiesError.html"
+                                  title='enum rusoto_workspaces::ModifyWorkspacePropertiesError'>ModifyWorkspacePropertiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ModifyWorkspaceProperties</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebootWorkspacesError.html"
+                                  title='enum rusoto_workspaces::RebootWorkspacesError'>RebootWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebootWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RebuildWorkspacesError.html"
+                                  title='enum rusoto_workspaces::RebuildWorkspacesError'>RebuildWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RebuildWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StartWorkspacesError.html"
+                                  title='enum rusoto_workspaces::StartWorkspacesError'>StartWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StartWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.StopWorkspacesError.html"
+                                  title='enum rusoto_workspaces::StopWorkspacesError'>StopWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by StopWorkspaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.TerminateWorkspacesError.html"
+                                  title='enum rusoto_workspaces::TerminateWorkspacesError'>TerminateWorkspacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by TerminateWorkspaces</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Workspaces.html"
+                                  title='trait rusoto_workspaces::Workspaces'>Workspaces</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon WorkSpaces API. Amazon WorkSpaces clients implement this trait.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_workspaces";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

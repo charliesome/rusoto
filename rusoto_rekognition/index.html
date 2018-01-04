@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `rusoto_rekognition` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, rusoto_rekognition">
+
+    <title>rusoto_rekognition - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate rusoto_rekognition</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_rekognition', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_rekognition</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_rekognition/lib.rs.html#14-29' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>This is the Amazon Rekognition API reference.</p>
+
+<p>If you&#39;re using the service, you&#39;re probably looking for <a href="struct.RekognitionClient.html">RekognitionClient</a> and <a href="trait.Rekognition.html">Rekognition</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.AgeRange.html"
+                                  title='struct rusoto_rekognition::AgeRange'>AgeRange</a></td>
+                           <td class='docblock-short'>
+                                <p>Structure containing the estimated age range, in years, for a face.</p> <p>Rekognition estimates an age-range for faces detected in the input image. Estimated age ranges can overlap; a face of a 5 year old may have an estimated range of 4-6 whilst the face of a 6 year old may have an estimated range of 4-8.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Beard.html"
+                                  title='struct rusoto_rekognition::Beard'>Beard</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the face has a beard, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BoundingBox.html"
+                                  title='struct rusoto_rekognition::BoundingBox'>BoundingBox</a></td>
+                           <td class='docblock-short'>
+                                <p><p>Identifies the bounding box around the object or face. The <code>left</code> (x-coordinate) and <code>top</code> (y-coordinate) are coordinates representing the top and left sides of the bounding box. Note that the upper-left corner of the image is the origin (0,0). </p> <p>The <code>top</code> and <code>left</code> values returned are ratios of the overall image size. For example, if the input image is 700x200 pixels, and the top-left coordinate of the bounding box is 350x50 pixels, the API returns a <code>left</code> value of 0.5 (350/700) and a <code>top</code> value of 0.25 (50/200).</p> <p> The <code>width</code> and <code>height</code> values represent the dimensions of the bounding box as a ratio of the overall image dimension. For example, if the input image is 700x200 pixels, and the bounding box width is 70 pixels, the width returned is 0.1. </p> <note> <p> The bounding box coordinates can have negative values. For example, if Amazon Rekognition is able to detect a face that is at the image edge and is only partially visible, the service can return coordinates that are outside the image bounds and, depending on the image edge, you might get negative values or values greater than 1 for the <code>left</code> or <code>top</code> values. </p> </note></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Celebrity.html"
+                                  title='struct rusoto_rekognition::Celebrity'>Celebrity</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information about a celebrity recognized by the operation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompareFacesMatch.html"
+                                  title='struct rusoto_rekognition::CompareFacesMatch'>CompareFacesMatch</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information about a face in a target image that matches the source image face analysed by <code>CompareFaces</code>. The <code>Face</code> property contains the bounding box of the face in the target image. The <code>Similarity</code> property is the confidence that the source image face matches the face in the bounding box.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompareFacesRequest.html"
+                                  title='struct rusoto_rekognition::CompareFacesRequest'>CompareFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CompareFacesResponse.html"
+                                  title='struct rusoto_rekognition::CompareFacesResponse'>CompareFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComparedFace.html"
+                                  title='struct rusoto_rekognition::ComparedFace'>ComparedFace</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides face metadata for target image faces that are analysed by <code>CompareFaces</code> and <code>RecognizeCelebrities</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ComparedSourceImageFace.html"
+                                  title='struct rusoto_rekognition::ComparedSourceImageFace'>ComparedSourceImageFace</a></td>
+                           <td class='docblock-short'>
+                                <p>Type that describes the face Amazon Rekognition chose to compare with the faces in the target. This contains a bounding box for the selected face and confidence level that the bounding box contains a face. Note that Amazon Rekognition selects the largest face in the source image for this comparison. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCollectionRequest.html"
+                                  title='struct rusoto_rekognition::CreateCollectionRequest'>CreateCollectionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateCollectionResponse.html"
+                                  title='struct rusoto_rekognition::CreateCollectionResponse'>CreateCollectionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCollectionRequest.html"
+                                  title='struct rusoto_rekognition::DeleteCollectionRequest'>DeleteCollectionRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteCollectionResponse.html"
+                                  title='struct rusoto_rekognition::DeleteCollectionResponse'>DeleteCollectionResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFacesRequest.html"
+                                  title='struct rusoto_rekognition::DeleteFacesRequest'>DeleteFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteFacesResponse.html"
+                                  title='struct rusoto_rekognition::DeleteFacesResponse'>DeleteFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectFacesRequest.html"
+                                  title='struct rusoto_rekognition::DetectFacesRequest'>DetectFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectFacesResponse.html"
+                                  title='struct rusoto_rekognition::DetectFacesResponse'>DetectFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectLabelsRequest.html"
+                                  title='struct rusoto_rekognition::DetectLabelsRequest'>DetectLabelsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectLabelsResponse.html"
+                                  title='struct rusoto_rekognition::DetectLabelsResponse'>DetectLabelsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectModerationLabelsRequest.html"
+                                  title='struct rusoto_rekognition::DetectModerationLabelsRequest'>DetectModerationLabelsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DetectModerationLabelsResponse.html"
+                                  title='struct rusoto_rekognition::DetectModerationLabelsResponse'>DetectModerationLabelsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Emotion.html"
+                                  title='struct rusoto_rekognition::Emotion'>Emotion</a></td>
+                           <td class='docblock-short'>
+                                <p>The emotions detected on the face, and the confidence level in the determination. For example, HAPPY, SAD, and ANGRY.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.EyeOpen.html"
+                                  title='struct rusoto_rekognition::EyeOpen'>EyeOpen</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the eyes on the face are open, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Eyeglasses.html"
+                                  title='struct rusoto_rekognition::Eyeglasses'>Eyeglasses</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the face is wearing eye glasses, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Face.html"
+                                  title='struct rusoto_rekognition::Face'>Face</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the face properties such as the bounding box, face ID, image ID of the input image, and external image ID that you assigned. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FaceDetail.html"
+                                  title='struct rusoto_rekognition::FaceDetail'>FaceDetail</a></td>
+                           <td class='docblock-short'>
+                                <p>Structure containing attributes of the face that the algorithm detected.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FaceMatch.html"
+                                  title='struct rusoto_rekognition::FaceMatch'>FaceMatch</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides face metadata. In addition, it also provides the confidence in the match of this face with the input face.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.FaceRecord.html"
+                                  title='struct rusoto_rekognition::FaceRecord'>FaceRecord</a></td>
+                           <td class='docblock-short'>
+                                <p>Object containing both the face metadata (stored in the back-end database) and facial attributes that are detected but aren't stored in the database.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Gender.html"
+                                  title='struct rusoto_rekognition::Gender'>Gender</a></td>
+                           <td class='docblock-short'>
+                                <p>Gender of the face and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCelebrityInfoRequest.html"
+                                  title='struct rusoto_rekognition::GetCelebrityInfoRequest'>GetCelebrityInfoRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.GetCelebrityInfoResponse.html"
+                                  title='struct rusoto_rekognition::GetCelebrityInfoResponse'>GetCelebrityInfoResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Image.html"
+                                  title='struct rusoto_rekognition::Image'>Image</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides the input image either as bytes or an S3 object.</p> <p>You pass image bytes to a Rekognition API operation by using the <code>Bytes</code> property. For example, you would use the <code>Bytes</code> property to pass an image loaded from a local file system. Image bytes passed by using the <code>Bytes</code> property must be base64-encoded. Your code may not need to encode image bytes if you are using an AWS SDK to call Rekognition API operations. For more information, see <a>example4</a>.</p> <p> You pass images stored in an S3 bucket to a Rekognition API operation by using the <code>S3Object</code> property. Images stored in an S3 bucket do not need to be base64-encoded.</p> <p>The region for the S3 bucket containing the S3 object must match the region you use for Amazon Rekognition operations.</p> <p>If you use the Amazon CLI to call Amazon Rekognition operations, passing image bytes using the Bytes property is not supported. You must first upload the image to an Amazon S3 bucket and then call the operation using the S3Object property.</p> <p>For Amazon Rekognition to process an S3 object, the user must have permission to access the S3 object. For more information, see <a>manage-access-resource-policies</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ImageQuality.html"
+                                  title='struct rusoto_rekognition::ImageQuality'>ImageQuality</a></td>
+                           <td class='docblock-short'>
+                                <p>Identifies face image brightness and sharpness. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IndexFacesRequest.html"
+                                  title='struct rusoto_rekognition::IndexFacesRequest'>IndexFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.IndexFacesResponse.html"
+                                  title='struct rusoto_rekognition::IndexFacesResponse'>IndexFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Label.html"
+                                  title='struct rusoto_rekognition::Label'>Label</a></td>
+                           <td class='docblock-short'>
+                                <p>Structure containing details about the detected label, including name, and level of confidence.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Landmark.html"
+                                  title='struct rusoto_rekognition::Landmark'>Landmark</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the location of the landmark on the face.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCollectionsRequest.html"
+                                  title='struct rusoto_rekognition::ListCollectionsRequest'>ListCollectionsRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListCollectionsResponse.html"
+                                  title='struct rusoto_rekognition::ListCollectionsResponse'>ListCollectionsResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFacesRequest.html"
+                                  title='struct rusoto_rekognition::ListFacesRequest'>ListFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ListFacesResponse.html"
+                                  title='struct rusoto_rekognition::ListFacesResponse'>ListFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.ModerationLabel.html"
+                                  title='struct rusoto_rekognition::ModerationLabel'>ModerationLabel</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides information about a single type of moderated content found in an image. Each type of moderated content has a label within a hierarchical taxonomy. For more information, see <a>image-moderation</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.MouthOpen.html"
+                                  title='struct rusoto_rekognition::MouthOpen'>MouthOpen</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the mouth on the face is open, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Mustache.html"
+                                  title='struct rusoto_rekognition::Mustache'>Mustache</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the face has a mustache, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Pose.html"
+                                  title='struct rusoto_rekognition::Pose'>Pose</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates the pose of the face as determined by its pitch, roll, and yaw.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecognizeCelebritiesRequest.html"
+                                  title='struct rusoto_rekognition::RecognizeCelebritiesRequest'>RecognizeCelebritiesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RecognizeCelebritiesResponse.html"
+                                  title='struct rusoto_rekognition::RecognizeCelebritiesResponse'>RecognizeCelebritiesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.RekognitionClient.html"
+                                  title='struct rusoto_rekognition::RekognitionClient'>RekognitionClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the Amazon Rekognition API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.S3Object.html"
+                                  title='struct rusoto_rekognition::S3Object'>S3Object</a></td>
+                           <td class='docblock-short'>
+                                <p>Provides the S3 bucket name and object name.</p> <p>The region for the S3 bucket containing the S3 object must match the region you use for Amazon Rekognition operations.</p> <p>For Amazon Rekognition to process an S3 object, the user must have permission to access the S3 object. For more information, see <a>manage-access-resource-policies</a>. </p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchFacesByImageRequest.html"
+                                  title='struct rusoto_rekognition::SearchFacesByImageRequest'>SearchFacesByImageRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchFacesByImageResponse.html"
+                                  title='struct rusoto_rekognition::SearchFacesByImageResponse'>SearchFacesByImageResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchFacesRequest.html"
+                                  title='struct rusoto_rekognition::SearchFacesRequest'>SearchFacesRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.SearchFacesResponse.html"
+                                  title='struct rusoto_rekognition::SearchFacesResponse'>SearchFacesResponse</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Smile.html"
+                                  title='struct rusoto_rekognition::Smile'>Smile</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the face is smiling, and the confidence level in the determination.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Sunglasses.html"
+                                  title='struct rusoto_rekognition::Sunglasses'>Sunglasses</a></td>
+                           <td class='docblock-short'>
+                                <p>Indicates whether or not the face is wearing sunglasses, and the confidence level in the determination.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CompareFacesError.html"
+                                  title='enum rusoto_rekognition::CompareFacesError'>CompareFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CompareFaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateCollectionError.html"
+                                  title='enum rusoto_rekognition::CreateCollectionError'>CreateCollectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateCollection</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteCollectionError.html"
+                                  title='enum rusoto_rekognition::DeleteCollectionError'>DeleteCollectionError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteCollection</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteFacesError.html"
+                                  title='enum rusoto_rekognition::DeleteFacesError'>DeleteFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteFaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetectFacesError.html"
+                                  title='enum rusoto_rekognition::DetectFacesError'>DetectFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetectFaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetectLabelsError.html"
+                                  title='enum rusoto_rekognition::DetectLabelsError'>DetectLabelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetectLabels</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DetectModerationLabelsError.html"
+                                  title='enum rusoto_rekognition::DetectModerationLabelsError'>DetectModerationLabelsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DetectModerationLabels</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.GetCelebrityInfoError.html"
+                                  title='enum rusoto_rekognition::GetCelebrityInfoError'>GetCelebrityInfoError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by GetCelebrityInfo</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.IndexFacesError.html"
+                                  title='enum rusoto_rekognition::IndexFacesError'>IndexFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by IndexFaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListCollectionsError.html"
+                                  title='enum rusoto_rekognition::ListCollectionsError'>ListCollectionsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListCollections</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.ListFacesError.html"
+                                  title='enum rusoto_rekognition::ListFacesError'>ListFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by ListFaces</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.RecognizeCelebritiesError.html"
+                                  title='enum rusoto_rekognition::RecognizeCelebritiesError'>RecognizeCelebritiesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by RecognizeCelebrities</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SearchFacesByImageError.html"
+                                  title='enum rusoto_rekognition::SearchFacesByImageError'>SearchFacesByImageError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SearchFacesByImage</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.SearchFacesError.html"
+                                  title='enum rusoto_rekognition::SearchFacesError'>SearchFacesError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by SearchFaces</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Rekognition.html"
+                                  title='trait rusoto_rekognition::Rekognition'>Rekognition</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the Amazon Rekognition API. Amazon Rekognition clients implement this trait.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_rekognition";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

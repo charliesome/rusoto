@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FaceDetail` struct in crate `rusoto_rekognition`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FaceDetail">
+
+    <title>rusoto_rekognition::FaceDetail - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct FaceDetail</p><div class="block items"><ul><li><a href="#fields">Fields</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_rekognition</a></p><script>window.sidebarCurrent = {name: 'FaceDetail', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_rekognition</a>::<wbr><a class="struct" href=''>FaceDetail</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#379-440' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct FaceDetail {
+    pub age_range: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.AgeRange.html" title="struct rusoto_rekognition::AgeRange">AgeRange</a>&gt;,
+    pub beard: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Beard.html" title="struct rusoto_rekognition::Beard">Beard</a>&gt;,
+    pub bounding_box: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.BoundingBox.html" title="struct rusoto_rekognition::BoundingBox">BoundingBox</a>&gt;,
+    pub confidence: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>&gt;,
+    pub emotions: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Emotion.html" title="struct rusoto_rekognition::Emotion">Emotion</a>&gt;&gt;,
+    pub eyeglasses: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Eyeglasses.html" title="struct rusoto_rekognition::Eyeglasses">Eyeglasses</a>&gt;,
+    pub eyes_open: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.EyeOpen.html" title="struct rusoto_rekognition::EyeOpen">EyeOpen</a>&gt;,
+    pub gender: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Gender.html" title="struct rusoto_rekognition::Gender">Gender</a>&gt;,
+    pub landmarks: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Landmark.html" title="struct rusoto_rekognition::Landmark">Landmark</a>&gt;&gt;,
+    pub mouth_open: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.MouthOpen.html" title="struct rusoto_rekognition::MouthOpen">MouthOpen</a>&gt;,
+    pub mustache: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Mustache.html" title="struct rusoto_rekognition::Mustache">Mustache</a>&gt;,
+    pub pose: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Pose.html" title="struct rusoto_rekognition::Pose">Pose</a>&gt;,
+    pub quality: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.ImageQuality.html" title="struct rusoto_rekognition::ImageQuality">ImageQuality</a>&gt;,
+    pub smile: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Smile.html" title="struct rusoto_rekognition::Smile">Smile</a>&gt;,
+    pub sunglasses: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Sunglasses.html" title="struct rusoto_rekognition::Sunglasses">Sunglasses</a>&gt;,
+}</pre><div class='docblock'><p>Structure containing attributes of the face that the algorithm detected.</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.age_range" class="structfield small-section-header">
+                           <a href="#structfield.age_range" class="anchor field"></a>
+                           <span id="age_range.v" class='invisible'>
+                           <code>age_range: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.AgeRange.html" title="struct rusoto_rekognition::AgeRange">AgeRange</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The estimated age range, in years, for the face. Low represents the lowest estimated age and High represents the highest estimated age.</p>
+</div><span id="structfield.beard" class="structfield small-section-header">
+                           <a href="#structfield.beard" class="anchor field"></a>
+                           <span id="beard.v" class='invisible'>
+                           <code>beard: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Beard.html" title="struct rusoto_rekognition::Beard">Beard</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the face has a beard, and the confidence level in the determination.</p>
+</div><span id="structfield.bounding_box" class="structfield small-section-header">
+                           <a href="#structfield.bounding_box" class="anchor field"></a>
+                           <span id="bounding_box.v" class='invisible'>
+                           <code>bounding_box: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.BoundingBox.html" title="struct rusoto_rekognition::BoundingBox">BoundingBox</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Bounding box of the face.</p>
+</div><span id="structfield.confidence" class="structfield small-section-header">
+                           <a href="#structfield.confidence" class="anchor field"></a>
+                           <span id="confidence.v" class='invisible'>
+                           <code>confidence: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.f32.html">f32</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Confidence level that the bounding box contains a face (and not a different object such as a tree).</p>
+</div><span id="structfield.emotions" class="structfield small-section-header">
+                           <a href="#structfield.emotions" class="anchor field"></a>
+                           <span id="emotions.v" class='invisible'>
+                           <code>emotions: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Emotion.html" title="struct rusoto_rekognition::Emotion">Emotion</a>&gt;&gt;</code>
+                           </span></span><div class='docblock'><p>The emotions detected on the face, and the confidence level in the determination. For example, HAPPY, SAD, and ANGRY. </p>
+</div><span id="structfield.eyeglasses" class="structfield small-section-header">
+                           <a href="#structfield.eyeglasses" class="anchor field"></a>
+                           <span id="eyeglasses.v" class='invisible'>
+                           <code>eyeglasses: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Eyeglasses.html" title="struct rusoto_rekognition::Eyeglasses">Eyeglasses</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the face is wearing eye glasses, and the confidence level in the determination.</p>
+</div><span id="structfield.eyes_open" class="structfield small-section-header">
+                           <a href="#structfield.eyes_open" class="anchor field"></a>
+                           <span id="eyes_open.v" class='invisible'>
+                           <code>eyes_open: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.EyeOpen.html" title="struct rusoto_rekognition::EyeOpen">EyeOpen</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the eyes on the face are open, and the confidence level in the determination.</p>
+</div><span id="structfield.gender" class="structfield small-section-header">
+                           <a href="#structfield.gender" class="anchor field"></a>
+                           <span id="gender.v" class='invisible'>
+                           <code>gender: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Gender.html" title="struct rusoto_rekognition::Gender">Gender</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Gender of the face and the confidence level in the determination.</p>
+</div><span id="structfield.landmarks" class="structfield small-section-header">
+                           <a href="#structfield.landmarks" class="anchor field"></a>
+                           <span id="landmarks.v" class='invisible'>
+                           <code>landmarks: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Landmark.html" title="struct rusoto_rekognition::Landmark">Landmark</a>&gt;&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates the location of landmarks on the face.</p>
+</div><span id="structfield.mouth_open" class="structfield small-section-header">
+                           <a href="#structfield.mouth_open" class="anchor field"></a>
+                           <span id="mouth_open.v" class='invisible'>
+                           <code>mouth_open: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.MouthOpen.html" title="struct rusoto_rekognition::MouthOpen">MouthOpen</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the mouth on the face is open, and the confidence level in the determination.</p>
+</div><span id="structfield.mustache" class="structfield small-section-header">
+                           <a href="#structfield.mustache" class="anchor field"></a>
+                           <span id="mustache.v" class='invisible'>
+                           <code>mustache: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Mustache.html" title="struct rusoto_rekognition::Mustache">Mustache</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the face has a mustache, and the confidence level in the determination.</p>
+</div><span id="structfield.pose" class="structfield small-section-header">
+                           <a href="#structfield.pose" class="anchor field"></a>
+                           <span id="pose.v" class='invisible'>
+                           <code>pose: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Pose.html" title="struct rusoto_rekognition::Pose">Pose</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates the pose of the face as determined by its pitch, roll, and yaw.</p>
+</div><span id="structfield.quality" class="structfield small-section-header">
+                           <a href="#structfield.quality" class="anchor field"></a>
+                           <span id="quality.v" class='invisible'>
+                           <code>quality: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.ImageQuality.html" title="struct rusoto_rekognition::ImageQuality">ImageQuality</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Identifies image brightness and sharpness.</p>
+</div><span id="structfield.smile" class="structfield small-section-header">
+                           <a href="#structfield.smile" class="anchor field"></a>
+                           <span id="smile.v" class='invisible'>
+                           <code>smile: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Smile.html" title="struct rusoto_rekognition::Smile">Smile</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the face is smiling, and the confidence level in the determination.</p>
+</div><span id="structfield.sunglasses" class="structfield small-section-header">
+                           <a href="#structfield.sunglasses" class="anchor field"></a>
+                           <span id="sunglasses.v" class='invisible'>
+                           <code>sunglasses: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_rekognition/struct.Sunglasses.html" title="struct rusoto_rekognition::Sunglasses">Sunglasses</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Indicates whether or not the face is wearing sunglasses, and the confidence level in the determination.</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../rusoto_rekognition/struct.FaceDetail.html" title="struct rusoto_rekognition::FaceDetail">FaceDetail</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class="struct" href="../rusoto_rekognition/struct.FaceDetail.html" title="struct rusoto_rekognition::FaceDetail">FaceDetail</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../rusoto_rekognition/struct.FaceDetail.html" title="struct rusoto_rekognition::FaceDetail">FaceDetail</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../rusoto_rekognition/struct.FaceDetail.html" title="struct rusoto_rekognition::FaceDetail">FaceDetail</a></code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../rusoto_rekognition/struct.FaceDetail.html" title="struct rusoto_rekognition::FaceDetail">FaceDetail</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_rekognition/generated.rs.html#378' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_rekognition";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

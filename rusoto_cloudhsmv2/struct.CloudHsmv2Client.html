@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CloudHsmv2Client` struct in crate `rusoto_cloudhsmv2`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CloudHsmv2Client">
+
+    <title>rusoto_cloudhsmv2::CloudHsmv2Client - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct CloudHsmv2Client</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_cloudhsmv2</a></p><script>window.sidebarCurrent = {name: 'CloudHsmv2Client', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_cloudhsmv2</a>::<wbr><a class="struct" href=''>CloudHsmv2Client</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1473-1480' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct CloudHsmv2Client&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span> { /* fields omitted */ }</pre><div class='docblock'><p>A client for the CloudHSM V2 API.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="struct" href="../rusoto_cloudhsmv2/struct.CloudHsmv2Client.html" title="struct rusoto_cloudhsmv2::CloudHsmv2Client">CloudHsmv2Client</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1482-1493' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;request_dispatcher: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;credentials_provider: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="enum" href="../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a><br>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1486-1492' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-CloudHsmv2' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="trait" href="../rusoto_cloudhsmv2/trait.CloudHsmv2.html" title="trait rusoto_cloudhsmv2::CloudHsmv2">CloudHsmv2</a> for <a class="struct" href="../rusoto_cloudhsmv2/struct.CloudHsmv2Client.html" title="struct rusoto_cloudhsmv2::CloudHsmv2Client">CloudHsmv2Client</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl-CloudHsmv2' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1495-1809' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.create_cluster' class="method"><span id='create_cluster.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.create_cluster' class='fnname'>create_cluster</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.CreateClusterRequest.html" title="struct rusoto_cloudhsmv2::CreateClusterRequest">CreateClusterRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.CreateClusterResponse.html" title="struct rusoto_cloudhsmv2::CreateClusterResponse">CreateClusterResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.CreateClusterError.html" title="enum rusoto_cloudhsmv2::CreateClusterError">CreateClusterError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1500-1528' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a new AWS CloudHSM cluster.</p>
+</div><h4 id='method.create_hsm' class="method"><span id='create_hsm.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.create_hsm' class='fnname'>create_hsm</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.CreateHsmRequest.html" title="struct rusoto_cloudhsmv2::CreateHsmRequest">CreateHsmRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.CreateHsmResponse.html" title="struct rusoto_cloudhsmv2::CreateHsmResponse">CreateHsmResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.CreateHsmError.html" title="enum rusoto_cloudhsmv2::CreateHsmError">CreateHsmError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1532-1558' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a new hardware security module (HSM) in the specified AWS CloudHSM cluster.</p>
+</div><h4 id='method.delete_cluster' class="method"><span id='delete_cluster.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.delete_cluster' class='fnname'>delete_cluster</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.DeleteClusterRequest.html" title="struct rusoto_cloudhsmv2::DeleteClusterRequest">DeleteClusterRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.DeleteClusterResponse.html" title="struct rusoto_cloudhsmv2::DeleteClusterResponse">DeleteClusterResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.DeleteClusterError.html" title="enum rusoto_cloudhsmv2::DeleteClusterError">DeleteClusterError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1562-1590' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Deletes the specified AWS CloudHSM cluster. Before you can delete a cluster, you must delete all HSMs in the cluster. To see if the cluster contains any HSMs, use <a>DescribeClusters</a>. To delete an HSM, use <a>DeleteHsm</a>.</p>
+</div><h4 id='method.delete_hsm' class="method"><span id='delete_hsm.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.delete_hsm' class='fnname'>delete_hsm</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.DeleteHsmRequest.html" title="struct rusoto_cloudhsmv2::DeleteHsmRequest">DeleteHsmRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.DeleteHsmResponse.html" title="struct rusoto_cloudhsmv2::DeleteHsmResponse">DeleteHsmResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.DeleteHsmError.html" title="enum rusoto_cloudhsmv2::DeleteHsmError">DeleteHsmError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1594-1620' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Deletes the specified HSM. To specify an HSM, you can use its identifier (ID), the IP address of the HSM's elastic network interface (ENI), or the ID of the HSM's ENI. You need to specify only one of these values. To find these values, use <a>DescribeClusters</a>.</p>
+</div><h4 id='method.describe_backups' class="method"><span id='describe_backups.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.describe_backups' class='fnname'>describe_backups</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.DescribeBackupsRequest.html" title="struct rusoto_cloudhsmv2::DescribeBackupsRequest">DescribeBackupsRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.DescribeBackupsResponse.html" title="struct rusoto_cloudhsmv2::DescribeBackupsResponse">DescribeBackupsResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.DescribeBackupsError.html" title="enum rusoto_cloudhsmv2::DescribeBackupsError">DescribeBackupsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1624-1652' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets information about backups of AWS CloudHSM clusters.</p> <p>This is a paginated operation, which means that each response might contain only a subset of all the backups. When the response contains only a subset of backups, it includes a <code>NextToken</code> value. Use this value in a subsequent <code>DescribeBackups</code> request to get more backups. When you receive a response with no <code>NextToken</code> (or an empty or null value), that means there are no more backups to get.</p>
+</div><h4 id='method.describe_clusters' class="method"><span id='describe_clusters.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.describe_clusters' class='fnname'>describe_clusters</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.DescribeClustersRequest.html" title="struct rusoto_cloudhsmv2::DescribeClustersRequest">DescribeClustersRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.DescribeClustersResponse.html" title="struct rusoto_cloudhsmv2::DescribeClustersResponse">DescribeClustersResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.DescribeClustersError.html" title="enum rusoto_cloudhsmv2::DescribeClustersError">DescribeClustersError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1656-1684' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets information about AWS CloudHSM clusters.</p> <p>This is a paginated operation, which means that each response might contain only a subset of all the clusters. When the response contains only a subset of clusters, it includes a <code>NextToken</code> value. Use this value in a subsequent <code>DescribeClusters</code> request to get more clusters. When you receive a response with no <code>NextToken</code> (or an empty or null value), that means there are no more clusters to get.</p>
+</div><h4 id='method.initialize_cluster' class="method"><span id='initialize_cluster.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.initialize_cluster' class='fnname'>initialize_cluster</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.InitializeClusterRequest.html" title="struct rusoto_cloudhsmv2::InitializeClusterRequest">InitializeClusterRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.InitializeClusterResponse.html" title="struct rusoto_cloudhsmv2::InitializeClusterResponse">InitializeClusterResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.InitializeClusterError.html" title="enum rusoto_cloudhsmv2::InitializeClusterError">InitializeClusterError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1688-1714' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Claims an AWS CloudHSM cluster by submitting the cluster certificate issued by your issuing certificate authority (CA) and the CA's root certificate. Before you can claim a cluster, you must sign the cluster's certificate signing request (CSR) with your issuing CA. To get the cluster's CSR, use <a>DescribeClusters</a>.</p>
+</div><h4 id='method.list_tags' class="method"><span id='list_tags.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.list_tags' class='fnname'>list_tags</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.ListTagsRequest.html" title="struct rusoto_cloudhsmv2::ListTagsRequest">ListTagsRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.ListTagsResponse.html" title="struct rusoto_cloudhsmv2::ListTagsResponse">ListTagsResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.ListTagsError.html" title="enum rusoto_cloudhsmv2::ListTagsError">ListTagsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1718-1744' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets a list of tags for the specified AWS CloudHSM cluster.</p> <p>This is a paginated operation, which means that each response might contain only a subset of all the tags. When the response contains only a subset of tags, it includes a <code>NextToken</code> value. Use this value in a subsequent <code>ListTags</code> request to get more tags. When you receive a response with no <code>NextToken</code> (or an empty or null value), that means there are no more tags to get.</p>
+</div><h4 id='method.tag_resource' class="method"><span id='tag_resource.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.tag_resource' class='fnname'>tag_resource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.TagResourceRequest.html" title="struct rusoto_cloudhsmv2::TagResourceRequest">TagResourceRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.TagResourceResponse.html" title="struct rusoto_cloudhsmv2::TagResourceResponse">TagResourceResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.TagResourceError.html" title="enum rusoto_cloudhsmv2::TagResourceError">TagResourceError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1748-1776' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Adds or overwrites one or more tags for the specified AWS CloudHSM cluster.</p>
+</div><h4 id='method.untag_resource' class="method"><span id='untag_resource.v' class='invisible'><code>fn <a href='../rusoto_cloudhsmv2/trait.CloudHsmv2.html#tymethod.untag_resource' class='fnname'>untag_resource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_cloudhsmv2/struct.UntagResourceRequest.html" title="struct rusoto_cloudhsmv2::UntagResourceRequest">UntagResourceRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_cloudhsmv2/struct.UntagResourceResponse.html" title="struct rusoto_cloudhsmv2::UntagResourceResponse">UntagResourceResponse</a>, <a class="enum" href="../rusoto_cloudhsmv2/enum.UntagResourceError.html" title="enum rusoto_cloudhsmv2::UntagResourceError">UntagResourceError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_cloudhsmv2/generated.rs.html#1780-1808' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Removes the specified tag or tags from the specified AWS CloudHSM cluster.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_cloudhsmv2";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

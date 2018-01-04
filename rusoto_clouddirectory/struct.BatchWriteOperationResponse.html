@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `BatchWriteOperationResponse` struct in crate `rusoto_clouddirectory`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, BatchWriteOperationResponse">
+
+    <title>rusoto_clouddirectory::BatchWriteOperationResponse - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct BatchWriteOperationResponse</p><div class="block items"><ul><li><a href="#fields">Fields</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_clouddirectory</a></p><script>window.sidebarCurrent = {name: 'BatchWriteOperationResponse', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_clouddirectory</a>::<wbr><a class="struct" href=''>BatchWriteOperationResponse</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1022-1079' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct BatchWriteOperationResponse {
+    pub add_facet_to_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAddFacetToObjectResponse.html" title="struct rusoto_clouddirectory::BatchAddFacetToObjectResponse">BatchAddFacetToObjectResponse</a>&gt;,
+    pub attach_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachObjectResponse.html" title="struct rusoto_clouddirectory::BatchAttachObjectResponse">BatchAttachObjectResponse</a>&gt;,
+    pub attach_policy: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachPolicyResponse.html" title="struct rusoto_clouddirectory::BatchAttachPolicyResponse">BatchAttachPolicyResponse</a>&gt;,
+    pub attach_to_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachToIndexResponse.html" title="struct rusoto_clouddirectory::BatchAttachToIndexResponse">BatchAttachToIndexResponse</a>&gt;,
+    pub attach_typed_link: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachTypedLinkResponse.html" title="struct rusoto_clouddirectory::BatchAttachTypedLinkResponse">BatchAttachTypedLinkResponse</a>&gt;,
+    pub create_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchCreateIndexResponse.html" title="struct rusoto_clouddirectory::BatchCreateIndexResponse">BatchCreateIndexResponse</a>&gt;,
+    pub create_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchCreateObjectResponse.html" title="struct rusoto_clouddirectory::BatchCreateObjectResponse">BatchCreateObjectResponse</a>&gt;,
+    pub delete_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDeleteObjectResponse.html" title="struct rusoto_clouddirectory::BatchDeleteObjectResponse">BatchDeleteObjectResponse</a>&gt;,
+    pub detach_from_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachFromIndexResponse.html" title="struct rusoto_clouddirectory::BatchDetachFromIndexResponse">BatchDetachFromIndexResponse</a>&gt;,
+    pub detach_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachObjectResponse.html" title="struct rusoto_clouddirectory::BatchDetachObjectResponse">BatchDetachObjectResponse</a>&gt;,
+    pub detach_policy: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachPolicyResponse.html" title="struct rusoto_clouddirectory::BatchDetachPolicyResponse">BatchDetachPolicyResponse</a>&gt;,
+    pub detach_typed_link: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachTypedLinkResponse.html" title="struct rusoto_clouddirectory::BatchDetachTypedLinkResponse">BatchDetachTypedLinkResponse</a>&gt;,
+    pub remove_facet_from_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchRemoveFacetFromObjectResponse.html" title="struct rusoto_clouddirectory::BatchRemoveFacetFromObjectResponse">BatchRemoveFacetFromObjectResponse</a>&gt;,
+    pub update_object_attributes: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchUpdateObjectAttributesResponse.html" title="struct rusoto_clouddirectory::BatchUpdateObjectAttributesResponse">BatchUpdateObjectAttributesResponse</a>&gt;,
+}</pre><div class='docblock'><p>Represents the output of a <code>BatchWrite</code> response operation.</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.add_facet_to_object" class="structfield small-section-header">
+                           <a href="#structfield.add_facet_to_object" class="anchor field"></a>
+                           <span id="add_facet_to_object.v" class='invisible'>
+                           <code>add_facet_to_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAddFacetToObjectResponse.html" title="struct rusoto_clouddirectory::BatchAddFacetToObjectResponse">BatchAddFacetToObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The result of an add facet to object batch operation.</p>
+</div><span id="structfield.attach_object" class="structfield small-section-header">
+                           <a href="#structfield.attach_object" class="anchor field"></a>
+                           <span id="attach_object.v" class='invisible'>
+                           <code>attach_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachObjectResponse.html" title="struct rusoto_clouddirectory::BatchAttachObjectResponse">BatchAttachObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Attaches an object to a <a>Directory</a>.</p>
+</div><span id="structfield.attach_policy" class="structfield small-section-header">
+                           <a href="#structfield.attach_policy" class="anchor field"></a>
+                           <span id="attach_policy.v" class='invisible'>
+                           <code>attach_policy: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachPolicyResponse.html" title="struct rusoto_clouddirectory::BatchAttachPolicyResponse">BatchAttachPolicyResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Attaches a policy object to a regular object. An object can have a limited number of attached policies.</p>
+</div><span id="structfield.attach_to_index" class="structfield small-section-header">
+                           <a href="#structfield.attach_to_index" class="anchor field"></a>
+                           <span id="attach_to_index.v" class='invisible'>
+                           <code>attach_to_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachToIndexResponse.html" title="struct rusoto_clouddirectory::BatchAttachToIndexResponse">BatchAttachToIndexResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Attaches the specified object to the specified index.</p>
+</div><span id="structfield.attach_typed_link" class="structfield small-section-header">
+                           <a href="#structfield.attach_typed_link" class="anchor field"></a>
+                           <span id="attach_typed_link.v" class='invisible'>
+                           <code>attach_typed_link: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchAttachTypedLinkResponse.html" title="struct rusoto_clouddirectory::BatchAttachTypedLinkResponse">BatchAttachTypedLinkResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Attaches a typed link to a specified source and target object. For more information, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed link</a>.</p>
+</div><span id="structfield.create_index" class="structfield small-section-header">
+                           <a href="#structfield.create_index" class="anchor field"></a>
+                           <span id="create_index.v" class='invisible'>
+                           <code>create_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchCreateIndexResponse.html" title="struct rusoto_clouddirectory::BatchCreateIndexResponse">BatchCreateIndexResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Creates an index object. See <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/cd_indexing.html">Indexing</a> for more information.</p>
+</div><span id="structfield.create_object" class="structfield small-section-header">
+                           <a href="#structfield.create_object" class="anchor field"></a>
+                           <span id="create_object.v" class='invisible'>
+                           <code>create_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchCreateObjectResponse.html" title="struct rusoto_clouddirectory::BatchCreateObjectResponse">BatchCreateObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Creates an object in a <a>Directory</a>.</p>
+</div><span id="structfield.delete_object" class="structfield small-section-header">
+                           <a href="#structfield.delete_object" class="anchor field"></a>
+                           <span id="delete_object.v" class='invisible'>
+                           <code>delete_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDeleteObjectResponse.html" title="struct rusoto_clouddirectory::BatchDeleteObjectResponse">BatchDeleteObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Deletes an object in a <a>Directory</a>.</p>
+</div><span id="structfield.detach_from_index" class="structfield small-section-header">
+                           <a href="#structfield.detach_from_index" class="anchor field"></a>
+                           <span id="detach_from_index.v" class='invisible'>
+                           <code>detach_from_index: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachFromIndexResponse.html" title="struct rusoto_clouddirectory::BatchDetachFromIndexResponse">BatchDetachFromIndexResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Detaches the specified object from the specified index.</p>
+</div><span id="structfield.detach_object" class="structfield small-section-header">
+                           <a href="#structfield.detach_object" class="anchor field"></a>
+                           <span id="detach_object.v" class='invisible'>
+                           <code>detach_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachObjectResponse.html" title="struct rusoto_clouddirectory::BatchDetachObjectResponse">BatchDetachObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Detaches an object from a <a>Directory</a>.</p>
+</div><span id="structfield.detach_policy" class="structfield small-section-header">
+                           <a href="#structfield.detach_policy" class="anchor field"></a>
+                           <span id="detach_policy.v" class='invisible'>
+                           <code>detach_policy: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachPolicyResponse.html" title="struct rusoto_clouddirectory::BatchDetachPolicyResponse">BatchDetachPolicyResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Detaches a policy from a <a>Directory</a>.</p>
+</div><span id="structfield.detach_typed_link" class="structfield small-section-header">
+                           <a href="#structfield.detach_typed_link" class="anchor field"></a>
+                           <span id="detach_typed_link.v" class='invisible'>
+                           <code>detach_typed_link: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchDetachTypedLinkResponse.html" title="struct rusoto_clouddirectory::BatchDetachTypedLinkResponse">BatchDetachTypedLinkResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Detaches a typed link from a specified source and target object. For more information, see <a href="http://docs.aws.amazon.com/directoryservice/latest/admin-guide/objectsandlinks.html#typedlink">Typed link</a>.</p>
+</div><span id="structfield.remove_facet_from_object" class="structfield small-section-header">
+                           <a href="#structfield.remove_facet_from_object" class="anchor field"></a>
+                           <span id="remove_facet_from_object.v" class='invisible'>
+                           <code>remove_facet_from_object: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchRemoveFacetFromObjectResponse.html" title="struct rusoto_clouddirectory::BatchRemoveFacetFromObjectResponse">BatchRemoveFacetFromObjectResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The result of a batch remove facet from object operation.</p>
+</div><span id="structfield.update_object_attributes" class="structfield small-section-header">
+                           <a href="#structfield.update_object_attributes" class="anchor field"></a>
+                           <span id="update_object_attributes.v" class='invisible'>
+                           <code>update_object_attributes: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../rusoto_clouddirectory/struct.BatchUpdateObjectAttributesResponse.html" title="struct rusoto_clouddirectory::BatchUpdateObjectAttributesResponse">BatchUpdateObjectAttributesResponse</a>&gt;</code>
+                           </span></span><div class='docblock'><p>Updates a given object’s attributes.</p>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Default' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html" title="trait core::default::Default">Default</a> for <a class="struct" href="../rusoto_clouddirectory/struct.BatchWriteOperationResponse.html" title="struct rusoto_clouddirectory::BatchWriteOperationResponse">BatchWriteOperationResponse</a></code><a href='#impl-Default' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class="method"><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class="struct" href="../rusoto_clouddirectory/struct.BatchWriteOperationResponse.html" title="struct rusoto_clouddirectory::BatchWriteOperationResponse">BatchWriteOperationResponse</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div><h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../rusoto_clouddirectory/struct.BatchWriteOperationResponse.html" title="struct rusoto_clouddirectory::BatchWriteOperationResponse">BatchWriteOperationResponse</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 id='impl-Clone' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html" title="trait core::clone::Clone">Clone</a> for <a class="struct" href="../rusoto_clouddirectory/struct.BatchWriteOperationResponse.html" title="struct rusoto_clouddirectory::BatchWriteOperationResponse">BatchWriteOperationResponse</a></code><a href='#impl-Clone' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class="method"><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class="struct" href="../rusoto_clouddirectory/struct.BatchWriteOperationResponse.html" title="struct rusoto_clouddirectory::BatchWriteOperationResponse">BatchWriteOperationResponse</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_clouddirectory/generated.rs.html#1021' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class="method"><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>Self)</code></span><span class='out-of-band'><div class='ghost'></div><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div><a class='srclink' href='https://doc.rust-lang.org/nightly/src/core/clone.rs.html#112-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_clouddirectory";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

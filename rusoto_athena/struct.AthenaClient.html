@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AthenaClient` struct in crate `rusoto_athena`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AthenaClient">
+
+    <title>rusoto_athena::AthenaClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct AthenaClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_athena</a></p><script>window.sidebarCurrent = {name: 'AthenaClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_athena</a>::<wbr><a class="struct" href=''>AthenaClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1506-1513' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct AthenaClient&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span> { /* fields omitted */ }</pre><div class='docblock'><p>A client for the Amazon Athena API.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="struct" href="../rusoto_athena/struct.AthenaClient.html" title="struct rusoto_athena::AthenaClient">AthenaClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1515-1526' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;request_dispatcher: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;credentials_provider: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="enum" href="../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a><br>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1519-1525' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Athena' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="trait" href="../rusoto_athena/trait.Athena.html" title="trait rusoto_athena::Athena">Athena</a> for <a class="struct" href="../rusoto_athena/struct.AthenaClient.html" title="struct rusoto_athena::AthenaClient">AthenaClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl-Athena' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1528-1877' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.batch_get_named_query' class="method"><span id='batch_get_named_query.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.batch_get_named_query' class='fnname'>batch_get_named_query</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.BatchGetNamedQueryInput.html" title="struct rusoto_athena::BatchGetNamedQueryInput">BatchGetNamedQueryInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.BatchGetNamedQueryOutput.html" title="struct rusoto_athena::BatchGetNamedQueryOutput">BatchGetNamedQueryOutput</a>, <a class="enum" href="../rusoto_athena/enum.BatchGetNamedQueryError.html" title="enum rusoto_athena::BatchGetNamedQueryError">BatchGetNamedQueryError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1533-1561' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the details of a single named query or a list of up to 50 queries, which you provide as an array of query ID strings. Use <a>ListNamedQueries</a> to get the list of named query IDs. If information could not be retrieved for a submitted query ID, information about the query ID submitted is listed under <a>UnprocessedNamedQueryId</a>. Named queries are different from executed queries. Use <a>BatchGetQueryExecution</a> to get details about each unique query execution, and <a>ListQueryExecutions</a> to get a list of query execution IDs.</p>
+</div><h4 id='method.batch_get_query_execution' class="method"><span id='batch_get_query_execution.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.batch_get_query_execution' class='fnname'>batch_get_query_execution</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.BatchGetQueryExecutionInput.html" title="struct rusoto_athena::BatchGetQueryExecutionInput">BatchGetQueryExecutionInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.BatchGetQueryExecutionOutput.html" title="struct rusoto_athena::BatchGetQueryExecutionOutput">BatchGetQueryExecutionOutput</a>, <a class="enum" href="../rusoto_athena/enum.BatchGetQueryExecutionError.html" title="enum rusoto_athena::BatchGetQueryExecutionError">BatchGetQueryExecutionError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1565-1592' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the details of a single query execution or a list of up to 50 query executions, which you provide as an array of query execution ID strings. To get a list of query execution IDs, use <a>ListQueryExecutions</a>. Query executions are different from named (saved) queries. Use <a>BatchGetNamedQuery</a> to get details about named queries.</p>
+</div><h4 id='method.create_named_query' class="method"><span id='create_named_query.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.create_named_query' class='fnname'>create_named_query</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.CreateNamedQueryInput.html" title="struct rusoto_athena::CreateNamedQueryInput">CreateNamedQueryInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.CreateNamedQueryOutput.html" title="struct rusoto_athena::CreateNamedQueryOutput">CreateNamedQueryOutput</a>, <a class="enum" href="../rusoto_athena/enum.CreateNamedQueryError.html" title="enum rusoto_athena::CreateNamedQueryError">CreateNamedQueryError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1596-1624' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a named query.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div><h4 id='method.delete_named_query' class="method"><span id='delete_named_query.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.delete_named_query' class='fnname'>delete_named_query</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.DeleteNamedQueryInput.html" title="struct rusoto_athena::DeleteNamedQueryInput">DeleteNamedQueryInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.DeleteNamedQueryOutput.html" title="struct rusoto_athena::DeleteNamedQueryOutput">DeleteNamedQueryOutput</a>, <a class="enum" href="../rusoto_athena/enum.DeleteNamedQueryError.html" title="enum rusoto_athena::DeleteNamedQueryError">DeleteNamedQueryError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1628-1656' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Deletes a named query.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div><h4 id='method.get_named_query' class="method"><span id='get_named_query.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.get_named_query' class='fnname'>get_named_query</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.GetNamedQueryInput.html" title="struct rusoto_athena::GetNamedQueryInput">GetNamedQueryInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.GetNamedQueryOutput.html" title="struct rusoto_athena::GetNamedQueryOutput">GetNamedQueryOutput</a>, <a class="enum" href="../rusoto_athena/enum.GetNamedQueryError.html" title="enum rusoto_athena::GetNamedQueryError">GetNamedQueryError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1660-1688' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns information about a single query.</p>
+</div><h4 id='method.get_query_execution' class="method"><span id='get_query_execution.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.get_query_execution' class='fnname'>get_query_execution</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.GetQueryExecutionInput.html" title="struct rusoto_athena::GetQueryExecutionInput">GetQueryExecutionInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.GetQueryExecutionOutput.html" title="struct rusoto_athena::GetQueryExecutionOutput">GetQueryExecutionOutput</a>, <a class="enum" href="../rusoto_athena/enum.GetQueryExecutionError.html" title="enum rusoto_athena::GetQueryExecutionError">GetQueryExecutionError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1692-1720' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns information about a single execution of a query. Each time a query executes, information about the query execution is saved with a unique ID.</p>
+</div><h4 id='method.get_query_results' class="method"><span id='get_query_results.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.get_query_results' class='fnname'>get_query_results</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.GetQueryResultsInput.html" title="struct rusoto_athena::GetQueryResultsInput">GetQueryResultsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.GetQueryResultsOutput.html" title="struct rusoto_athena::GetQueryResultsOutput">GetQueryResultsOutput</a>, <a class="enum" href="../rusoto_athena/enum.GetQueryResultsError.html" title="enum rusoto_athena::GetQueryResultsError">GetQueryResultsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1724-1752' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the results of a single query execution specified by <code>QueryExecutionId</code>. This request does not execute the query but returns results. Use <a>StartQueryExecution</a> to run a query.</p>
+</div><h4 id='method.list_named_queries' class="method"><span id='list_named_queries.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.list_named_queries' class='fnname'>list_named_queries</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.ListNamedQueriesInput.html" title="struct rusoto_athena::ListNamedQueriesInput">ListNamedQueriesInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.ListNamedQueriesOutput.html" title="struct rusoto_athena::ListNamedQueriesOutput">ListNamedQueriesOutput</a>, <a class="enum" href="../rusoto_athena/enum.ListNamedQueriesError.html" title="enum rusoto_athena::ListNamedQueriesError">ListNamedQueriesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1756-1784' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Provides a list of all available query IDs.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div><h4 id='method.list_query_executions' class="method"><span id='list_query_executions.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.list_query_executions' class='fnname'>list_query_executions</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.ListQueryExecutionsInput.html" title="struct rusoto_athena::ListQueryExecutionsInput">ListQueryExecutionsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.ListQueryExecutionsOutput.html" title="struct rusoto_athena::ListQueryExecutionsOutput">ListQueryExecutionsOutput</a>, <a class="enum" href="../rusoto_athena/enum.ListQueryExecutionsError.html" title="enum rusoto_athena::ListQueryExecutionsError">ListQueryExecutionsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1788-1814' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Provides a list of all available query execution IDs.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div><h4 id='method.start_query_execution' class="method"><span id='start_query_execution.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.start_query_execution' class='fnname'>start_query_execution</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.StartQueryExecutionInput.html" title="struct rusoto_athena::StartQueryExecutionInput">StartQueryExecutionInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.StartQueryExecutionOutput.html" title="struct rusoto_athena::StartQueryExecutionOutput">StartQueryExecutionOutput</a>, <a class="enum" href="../rusoto_athena/enum.StartQueryExecutionError.html" title="enum rusoto_athena::StartQueryExecutionError">StartQueryExecutionError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1818-1844' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Runs (executes) the SQL query statements contained in the <code>Query</code> string.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div><h4 id='method.stop_query_execution' class="method"><span id='stop_query_execution.v' class='invisible'><code>fn <a href='../rusoto_athena/trait.Athena.html#tymethod.stop_query_execution' class='fnname'>stop_query_execution</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_athena/struct.StopQueryExecutionInput.html" title="struct rusoto_athena::StopQueryExecutionInput">StopQueryExecutionInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_athena/struct.StopQueryExecutionOutput.html" title="struct rusoto_athena::StopQueryExecutionOutput">StopQueryExecutionOutput</a>, <a class="enum" href="../rusoto_athena/enum.StopQueryExecutionError.html" title="enum rusoto_athena::StopQueryExecutionError">StopQueryExecutionError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_athena/generated.rs.html#1848-1876' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Stops a query execution.</p> <p>For code samples using the AWS SDK for Java, see <a href="http://docs.aws.amazon.com/athena/latest/ug/code-samples.html">Examples and Code Samples</a> in the <i>Amazon Athena User Guide</i>.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_athena";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

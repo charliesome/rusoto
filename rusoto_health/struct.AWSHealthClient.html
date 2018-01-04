@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AWSHealthClient` struct in crate `rusoto_health`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AWSHealthClient">
+
+    <title>rusoto_health::AWSHealthClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct AWSHealthClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_health</a></p><script>window.sidebarCurrent = {name: 'AWSHealthClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_health</a>::<wbr><a class="struct" href=''>AWSHealthClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_health/generated.rs.html#981-988' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct AWSHealthClient&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span> { /* fields omitted */ }</pre><div class='docblock'><p>A client for the AWSHealth API.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="struct" href="../rusoto_health/struct.AWSHealthClient.html" title="struct rusoto_health::AWSHealthClient">AWSHealthClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#990-1001' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;request_dispatcher: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;credentials_provider: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="enum" href="../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a><br>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#994-1000' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-AWSHealth' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="trait" href="../rusoto_health/trait.AWSHealth.html" title="trait rusoto_health::AWSHealth">AWSHealth</a> for <a class="struct" href="../rusoto_health/struct.AWSHealthClient.html" title="struct rusoto_health::AWSHealthClient">AWSHealthClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl-AWSHealth' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1003-1196' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.describe_affected_entities' class="method"><span id='describe_affected_entities.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_affected_entities' class='fnname'>describe_affected_entities</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeAffectedEntitiesRequest.html" title="struct rusoto_health::DescribeAffectedEntitiesRequest">DescribeAffectedEntitiesRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeAffectedEntitiesResponse.html" title="struct rusoto_health::DescribeAffectedEntitiesResponse">DescribeAffectedEntitiesResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeAffectedEntitiesError.html" title="enum rusoto_health::DescribeAffectedEntitiesError">DescribeAffectedEntitiesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1008-1037' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns a list of entities that have been affected by the specified events, based on the specified filter criteria. Entities can refer to individual customer resources, groups of customer resources, or any other construct, depending on the AWS service. Events that have impact beyond that of the affected entities, or where the extent of impact is unknown, include at least one entity indicating this.</p> <p>At least one event ARN is required. Results are sorted by the <code>lastUpdatedTime</code> of the entity, starting with the most recent.</p>
+</div><h4 id='method.describe_entity_aggregates' class="method"><span id='describe_entity_aggregates.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_entity_aggregates' class='fnname'>describe_entity_aggregates</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeEntityAggregatesRequest.html" title="struct rusoto_health::DescribeEntityAggregatesRequest">DescribeEntityAggregatesRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeEntityAggregatesResponse.html" title="struct rusoto_health::DescribeEntityAggregatesResponse">DescribeEntityAggregatesResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeEntityAggregatesError.html" title="enum rusoto_health::DescribeEntityAggregatesError">DescribeEntityAggregatesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1041-1070' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the number of entities that are affected by each of the specified events. If no events are specified, the counts of all affected entities are returned.</p>
+</div><h4 id='method.describe_event_aggregates' class="method"><span id='describe_event_aggregates.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_event_aggregates' class='fnname'>describe_event_aggregates</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeEventAggregatesRequest.html" title="struct rusoto_health::DescribeEventAggregatesRequest">DescribeEventAggregatesRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeEventAggregatesResponse.html" title="struct rusoto_health::DescribeEventAggregatesResponse">DescribeEventAggregatesResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeEventAggregatesError.html" title="enum rusoto_health::DescribeEventAggregatesError">DescribeEventAggregatesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1074-1102' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the number of events of each event type (issue, scheduled change, and account notification). If no filter is specified, the counts of all events in each category are returned.</p>
+</div><h4 id='method.describe_event_details' class="method"><span id='describe_event_details.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_event_details' class='fnname'>describe_event_details</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeEventDetailsRequest.html" title="struct rusoto_health::DescribeEventDetailsRequest">DescribeEventDetailsRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeEventDetailsResponse.html" title="struct rusoto_health::DescribeEventDetailsResponse">DescribeEventDetailsResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeEventDetailsError.html" title="enum rusoto_health::DescribeEventDetailsError">DescribeEventDetailsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1106-1133' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns detailed information about one or more specified events. Information includes standard event data (region, service, etc., as returned by <a>DescribeEvents</a>), a detailed event description, and possible additional metadata that depends upon the nature of the event. Affected entities are not included; to retrieve those, use the <a>DescribeAffectedEntities</a> operation.</p> <p>If a specified event cannot be retrieved, an error message is returned for that event.</p>
+</div><h4 id='method.describe_event_types' class="method"><span id='describe_event_types.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_event_types' class='fnname'>describe_event_types</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeEventTypesRequest.html" title="struct rusoto_health::DescribeEventTypesRequest">DescribeEventTypesRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeEventTypesResponse.html" title="struct rusoto_health::DescribeEventTypesResponse">DescribeEventTypesResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeEventTypesError.html" title="enum rusoto_health::DescribeEventTypesError">DescribeEventTypesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1137-1163' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the event types that meet the specified filter criteria. If no filter criteria are specified, all event types are returned, in no particular order.</p>
+</div><h4 id='method.describe_events' class="method"><span id='describe_events.v' class='invisible'><code>fn <a href='../rusoto_health/trait.AWSHealth.html#tymethod.describe_events' class='fnname'>describe_events</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_health/struct.DescribeEventsRequest.html" title="struct rusoto_health::DescribeEventsRequest">DescribeEventsRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_health/struct.DescribeEventsResponse.html" title="struct rusoto_health::DescribeEventsResponse">DescribeEventsResponse</a>, <a class="enum" href="../rusoto_health/enum.DescribeEventsError.html" title="enum rusoto_health::DescribeEventsError">DescribeEventsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_health/generated.rs.html#1167-1195' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns information about events that meet the specified filter criteria. Events are returned in a summary form and do not include the detailed description, any additional metadata that depends on the event type, or any affected resources. To retrieve that information, use the <a>DescribeEventDetails</a> and <a>DescribeAffectedEntities</a> operations.</p> <p>If no filter criteria are specified, all events are returned. Results are sorted by <code>lastModifiedTime</code>, starting with the most recent.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_health";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

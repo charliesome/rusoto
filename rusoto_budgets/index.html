@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `rusoto_budgets` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, rusoto_budgets">
+
+    <title>rusoto_budgets - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc mod">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Crate rusoto_budgets</p><div class="block items"><ul><li><a href="#structs">Structs</a></li><li><a href="#enums">Enums</a></li><li><a href="#traits">Traits</a></li></ul></div><p class='location'></p><script>window.sidebarCurrent = {name: 'rusoto_budgets', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Crate <a class="mod" href=''>rusoto_budgets</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_budgets/lib.rs.html#14-29' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>All public APIs for AWS Budgets</p>
+
+<p>If you&#39;re using the service, you&#39;re probably looking for <a href="struct.BudgetsClient.html">BudgetsClient</a> and <a href="trait.Budgets.html">Budgets</a>.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Budget.html"
+                                  title='struct rusoto_budgets::Budget'>Budget</a></td>
+                           <td class='docblock-short'>
+                                <p>AWS Budget model</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.BudgetsClient.html"
+                                  title='struct rusoto_budgets::BudgetsClient'>BudgetsClient</a></td>
+                           <td class='docblock-short'>
+                                <p>A client for the AWSBudgets API.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CalculatedSpend.html"
+                                  title='struct rusoto_budgets::CalculatedSpend'>CalculatedSpend</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure holds the actual and forecasted spend for a budget.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CostTypes.html"
+                                  title='struct rusoto_budgets::CostTypes'>CostTypes</a></td>
+                           <td class='docblock-short'>
+                                <p>This includes the options for getting the cost of a budget.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBudgetRequest.html"
+                                  title='struct rusoto_budgets::CreateBudgetRequest'>CreateBudgetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of CreateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateBudgetResponse.html"
+                                  title='struct rusoto_budgets::CreateBudgetResponse'>CreateBudgetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of CreateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNotificationRequest.html"
+                                  title='struct rusoto_budgets::CreateNotificationRequest'>CreateNotificationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of CreateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateNotificationResponse.html"
+                                  title='struct rusoto_budgets::CreateNotificationResponse'>CreateNotificationResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of CreateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriberRequest.html"
+                                  title='struct rusoto_budgets::CreateSubscriberRequest'>CreateSubscriberRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of CreateSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.CreateSubscriberResponse.html"
+                                  title='struct rusoto_budgets::CreateSubscriberResponse'>CreateSubscriberResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of CreateSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBudgetRequest.html"
+                                  title='struct rusoto_budgets::DeleteBudgetRequest'>DeleteBudgetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DeleteBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteBudgetResponse.html"
+                                  title='struct rusoto_budgets::DeleteBudgetResponse'>DeleteBudgetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DeleteBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNotificationRequest.html"
+                                  title='struct rusoto_budgets::DeleteNotificationRequest'>DeleteNotificationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DeleteNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteNotificationResponse.html"
+                                  title='struct rusoto_budgets::DeleteNotificationResponse'>DeleteNotificationResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DeleteNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriberRequest.html"
+                                  title='struct rusoto_budgets::DeleteSubscriberRequest'>DeleteSubscriberRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DeleteSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DeleteSubscriberResponse.html"
+                                  title='struct rusoto_budgets::DeleteSubscriberResponse'>DeleteSubscriberResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DeleteSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBudgetRequest.html"
+                                  title='struct rusoto_budgets::DescribeBudgetRequest'>DescribeBudgetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DescribeBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBudgetResponse.html"
+                                  title='struct rusoto_budgets::DescribeBudgetResponse'>DescribeBudgetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DescribeBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBudgetsRequest.html"
+                                  title='struct rusoto_budgets::DescribeBudgetsRequest'>DescribeBudgetsRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DescribeBudgets</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeBudgetsResponse.html"
+                                  title='struct rusoto_budgets::DescribeBudgetsResponse'>DescribeBudgetsResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DescribeBudgets</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationsForBudgetRequest.html"
+                                  title='struct rusoto_budgets::DescribeNotificationsForBudgetRequest'>DescribeNotificationsForBudgetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DescribeNotificationsForBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeNotificationsForBudgetResponse.html"
+                                  title='struct rusoto_budgets::DescribeNotificationsForBudgetResponse'>DescribeNotificationsForBudgetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of GetNotificationsForBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscribersForNotificationRequest.html"
+                                  title='struct rusoto_budgets::DescribeSubscribersForNotificationRequest'>DescribeSubscribersForNotificationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of DescribeSubscribersForNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.DescribeSubscribersForNotificationResponse.html"
+                                  title='struct rusoto_budgets::DescribeSubscribersForNotificationResponse'>DescribeSubscribersForNotificationResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of DescribeSubscribersForNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Notification.html"
+                                  title='struct rusoto_budgets::Notification'>Notification</a></td>
+                           <td class='docblock-short'>
+                                <p>Notification model. Each budget may contain multiple notifications with different settings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.NotificationWithSubscribers.html"
+                                  title='struct rusoto_budgets::NotificationWithSubscribers'>NotificationWithSubscribers</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure to relate notification and a list of subscribers who belong to the notification.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Spend.html"
+                                  title='struct rusoto_budgets::Spend'>Spend</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure represent either a cost spend or usage spend. Contains an amount and a unit.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.Subscriber.html"
+                                  title='struct rusoto_budgets::Subscriber'>Subscriber</a></td>
+                           <td class='docblock-short'>
+                                <p>Subscriber model. Each notification may contain multiple subscribers with different addresses.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.TimePeriod.html"
+                                  title='struct rusoto_budgets::TimePeriod'>TimePeriod</a></td>
+                           <td class='docblock-short'>
+                                <p>A time period indicated the start date and end date of a budget.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateBudgetRequest.html"
+                                  title='struct rusoto_budgets::UpdateBudgetRequest'>UpdateBudgetRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of UpdateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateBudgetResponse.html"
+                                  title='struct rusoto_budgets::UpdateBudgetResponse'>UpdateBudgetResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of UpdateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNotificationRequest.html"
+                                  title='struct rusoto_budgets::UpdateNotificationRequest'>UpdateNotificationRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of UpdateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateNotificationResponse.html"
+                                  title='struct rusoto_budgets::UpdateNotificationResponse'>UpdateNotificationResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of UpdateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSubscriberRequest.html"
+                                  title='struct rusoto_budgets::UpdateSubscriberRequest'>UpdateSubscriberRequest</a></td>
+                           <td class='docblock-short'>
+                                <p>Request of UpdateSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="struct" href="struct.UpdateSubscriberResponse.html"
+                                  title='struct rusoto_budgets::UpdateSubscriberResponse'>UpdateSubscriberResponse</a></td>
+                           <td class='docblock-short'>
+                                <p>Response of UpdateSubscriber</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateBudgetError.html"
+                                  title='enum rusoto_budgets::CreateBudgetError'>CreateBudgetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateNotificationError.html"
+                                  title='enum rusoto_budgets::CreateNotificationError'>CreateNotificationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.CreateSubscriberError.html"
+                                  title='enum rusoto_budgets::CreateSubscriberError'>CreateSubscriberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by CreateSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteBudgetError.html"
+                                  title='enum rusoto_budgets::DeleteBudgetError'>DeleteBudgetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteNotificationError.html"
+                                  title='enum rusoto_budgets::DeleteNotificationError'>DeleteNotificationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DeleteSubscriberError.html"
+                                  title='enum rusoto_budgets::DeleteSubscriberError'>DeleteSubscriberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DeleteSubscriber</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeBudgetError.html"
+                                  title='enum rusoto_budgets::DescribeBudgetError'>DescribeBudgetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeBudgetsError.html"
+                                  title='enum rusoto_budgets::DescribeBudgetsError'>DescribeBudgetsError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeBudgets</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeNotificationsForBudgetError.html"
+                                  title='enum rusoto_budgets::DescribeNotificationsForBudgetError'>DescribeNotificationsForBudgetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeNotificationsForBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.DescribeSubscribersForNotificationError.html"
+                                  title='enum rusoto_budgets::DescribeSubscribersForNotificationError'>DescribeSubscribersForNotificationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by DescribeSubscribersForNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateBudgetError.html"
+                                  title='enum rusoto_budgets::UpdateBudgetError'>UpdateBudgetError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateBudget</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateNotificationError.html"
+                                  title='enum rusoto_budgets::UpdateNotificationError'>UpdateNotificationError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateNotification</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class="enum" href="enum.UpdateSubscriberError.html"
+                                  title='enum rusoto_budgets::UpdateSubscriberError'>UpdateSubscriberError</a></td>
+                           <td class='docblock-short'>
+                                <p>Errors returned by UpdateSubscriber</p>
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class="trait" href="trait.Budgets.html"
+                                  title='trait rusoto_budgets::Budgets'>Budgets</a></td>
+                           <td class='docblock-short'>
+                                <p>Trait representing the capabilities of the AWSBudgets API. AWSBudgets clients implement this trait.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_budgets";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

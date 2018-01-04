@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `rusoto/services/codecommit/src/lib.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>lib.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc source">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><pre class="line-numbers"><span id="1"> 1</span>
+<span id="2"> 2</span>
+<span id="3"> 3</span>
+<span id="4"> 4</span>
+<span id="5"> 5</span>
+<span id="6"> 6</span>
+<span id="7"> 7</span>
+<span id="8"> 8</span>
+<span id="9"> 9</span>
+<span id="10">10</span>
+<span id="11">11</span>
+<span id="12">12</span>
+<span id="13">13</span>
+<span id="14">14</span>
+<span id="15">15</span>
+<span id="16">16</span>
+<span id="17">17</span>
+<span id="18">18</span>
+<span id="19">19</span>
+<span id="20">20</span>
+<span id="21">21</span>
+<span id="22">22</span>
+<span id="23">23</span>
+<span id="24">24</span>
+<span id="25">25</span>
+<span id="26">26</span>
+<span id="27">27</span>
+<span id="28">28</span>
+<span id="29">29</span>
+<span id="30">30</span>
+</pre><pre class="rust ">
+
+<span class="comment">// =================================================================</span>
+<span class="comment">//</span>
+<span class="comment">//                           * WARNING *</span>
+<span class="comment">//</span>
+<span class="comment">//                    This file is generated!</span>
+<span class="comment">//</span>
+<span class="comment">//  Changes made to this file will be overwritten. If changes are</span>
+<span class="comment">//  required to the generated code, the service_crategen project</span>
+<span class="comment">//  must be updated to generate the changes.</span>
+<span class="comment">//</span>
+<span class="comment">// =================================================================</span>
+
+<span class="doccomment">//! &lt;fullname&gt;AWS CodeCommit&lt;/fullname&gt; &lt;p&gt;This is the &lt;i&gt;AWS CodeCommit API Reference&lt;/i&gt;. This reference provides descriptions of the operations and data types for AWS CodeCommit API along with usage examples.&lt;/p&gt; &lt;p&gt;You can use the AWS CodeCommit API to work with the following objects:&lt;/p&gt; &lt;p&gt;Repositories, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;BatchGetRepositories&lt;/a&gt;, which returns information about one or more repositories associated with your AWS account&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateRepository&lt;/a&gt;, which creates an AWS CodeCommit repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;DeleteRepository&lt;/a&gt;, which deletes an AWS CodeCommit repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetRepository&lt;/a&gt;, which returns information about a specified repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListRepositories&lt;/a&gt;, which lists all AWS CodeCommit repositories associated with your AWS account&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateRepositoryDescription&lt;/a&gt;, which sets or updates the description of the repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateRepositoryName&lt;/a&gt;, which changes the name of the repository. If you change the name of a repository, no other users of that repository will be able to access it until you send them the new HTTPS or SSH URL to use.&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Branches, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;CreateBranch&lt;/a&gt;, which creates a new branch in a specified repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetBranch&lt;/a&gt;, which returns information about a specified branch&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;ListBranches&lt;/a&gt;, which lists all branches for a specified repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;UpdateDefaultBranch&lt;/a&gt;, which changes the default branch for a repository&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Information about committed code in a repository, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetBlob&lt;/a&gt;, which returns the base-64 encoded content of an individual Git blob object within a repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetCommit&lt;/a&gt;, which returns information about a commit, including commit messages and author and committer information&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetDifferences&lt;/a&gt;, which returns information about the differences in a valid commit specifier (such as a branch, tag, HEAD, commit ID or other fully qualified reference)&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;Triggers, by calling the following:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;GetRepositoryTriggers&lt;/a&gt;, which returns information about triggers configured for a repository&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;PutRepositoryTriggers&lt;/a&gt;, which replaces all triggers for a repository and can be used to create or delete triggers&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt; &lt;a&gt;TestRepositoryTriggers&lt;/a&gt;, which tests the functionality of a repository trigger by sending data to the trigger target&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;For information about how to use AWS CodeCommit, see the &lt;a href=&quot;http://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html&quot;&gt;AWS CodeCommit User Guide&lt;/a&gt;.&lt;/p&gt;</span>
+<span class="doccomment">//!</span>
+<span class="doccomment">//! If you&#39;re using the service, you&#39;re probably looking for [CodeCommitClient](struct.CodeCommitClient.html) and [CodeCommit](trait.CodeCommit.html).</span>
+
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">hyper</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">rusoto_core</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">serde</span>;
+<span class="attribute">#[<span class="ident">macro_use</span>]</span>
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">serde_derive</span>;
+<span class="kw">extern</span> <span class="kw">crate</span> <span class="ident">serde_json</span>;
+
+<span class="kw">mod</span> <span class="ident">generated</span>;
+<span class="kw">mod</span> <span class="ident">custom</span>;
+
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">generated</span>::<span class="kw-2">*</span>;
+<span class="kw">pub</span> <span class="kw">use</span> <span class="ident">custom</span>::<span class="kw-2">*</span>;
+            
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rusoto_codecommit";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CodeBuildClient` struct in crate `rusoto_codebuild`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CodeBuildClient">
+
+    <title>rusoto_codebuild::CodeBuildClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct CodeBuildClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_codebuild</a></p><script>window.sidebarCurrent = {name: 'CodeBuildClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_codebuild</a>::<wbr><a class="struct" href=''>CodeBuildClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1618-1625' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct CodeBuildClient&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span> { /* fields omitted */ }</pre><div class='docblock'><p>A client for the AWS CodeBuild API.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="struct" href="../rusoto_codebuild/struct.CodeBuildClient.html" title="struct rusoto_codebuild::CodeBuildClient">CodeBuildClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1627-1638' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;request_dispatcher: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;credentials_provider: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="enum" href="../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a><br>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1631-1637' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-CodeBuild' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="trait" href="../rusoto_codebuild/trait.CodeBuild.html" title="trait rusoto_codebuild::CodeBuild">CodeBuild</a> for <a class="struct" href="../rusoto_codebuild/struct.CodeBuildClient.html" title="struct rusoto_codebuild::CodeBuildClient">CodeBuildClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl-CodeBuild' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1640-1984' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.batch_get_builds' class="method"><span id='batch_get_builds.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.batch_get_builds' class='fnname'>batch_get_builds</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.BatchGetBuildsInput.html" title="struct rusoto_codebuild::BatchGetBuildsInput">BatchGetBuildsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.BatchGetBuildsOutput.html" title="struct rusoto_codebuild::BatchGetBuildsOutput">BatchGetBuildsOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.BatchGetBuildsError.html" title="enum rusoto_codebuild::BatchGetBuildsError">BatchGetBuildsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1645-1673' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets information about builds.</p>
+</div><h4 id='method.batch_get_projects' class="method"><span id='batch_get_projects.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.batch_get_projects' class='fnname'>batch_get_projects</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.BatchGetProjectsInput.html" title="struct rusoto_codebuild::BatchGetProjectsInput">BatchGetProjectsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.BatchGetProjectsOutput.html" title="struct rusoto_codebuild::BatchGetProjectsOutput">BatchGetProjectsOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.BatchGetProjectsError.html" title="enum rusoto_codebuild::BatchGetProjectsError">BatchGetProjectsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1677-1705' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets information about build projects.</p>
+</div><h4 id='method.create_project' class="method"><span id='create_project.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.create_project' class='fnname'>create_project</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.CreateProjectInput.html" title="struct rusoto_codebuild::CreateProjectInput">CreateProjectInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.CreateProjectOutput.html" title="struct rusoto_codebuild::CreateProjectOutput">CreateProjectOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.CreateProjectError.html" title="enum rusoto_codebuild::CreateProjectError">CreateProjectError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1709-1737' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Creates a build project.</p>
+</div><h4 id='method.delete_project' class="method"><span id='delete_project.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.delete_project' class='fnname'>delete_project</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.DeleteProjectInput.html" title="struct rusoto_codebuild::DeleteProjectInput">DeleteProjectInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.DeleteProjectOutput.html" title="struct rusoto_codebuild::DeleteProjectOutput">DeleteProjectOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.DeleteProjectError.html" title="enum rusoto_codebuild::DeleteProjectError">DeleteProjectError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1741-1769' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Deletes a build project.</p>
+</div><h4 id='method.list_builds' class="method"><span id='list_builds.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.list_builds' class='fnname'>list_builds</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.ListBuildsInput.html" title="struct rusoto_codebuild::ListBuildsInput">ListBuildsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.ListBuildsOutput.html" title="struct rusoto_codebuild::ListBuildsOutput">ListBuildsOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.ListBuildsError.html" title="enum rusoto_codebuild::ListBuildsError">ListBuildsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1773-1799' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets a list of build IDs, with each build ID representing a single build.</p>
+</div><h4 id='method.list_builds_for_project' class="method"><span id='list_builds_for_project.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.list_builds_for_project' class='fnname'>list_builds_for_project</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.ListBuildsForProjectInput.html" title="struct rusoto_codebuild::ListBuildsForProjectInput">ListBuildsForProjectInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.ListBuildsForProjectOutput.html" title="struct rusoto_codebuild::ListBuildsForProjectOutput">ListBuildsForProjectOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.ListBuildsForProjectError.html" title="enum rusoto_codebuild::ListBuildsForProjectError">ListBuildsForProjectError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1803-1829' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets a list of build IDs for the specified build project, with each build ID representing a single build.</p>
+</div><h4 id='method.list_curated_environment_images' class="method"><span id='list_curated_environment_images.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.list_curated_environment_images' class='fnname'>list_curated_environment_images</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self<br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.ListCuratedEnvironmentImagesOutput.html" title="struct rusoto_codebuild::ListCuratedEnvironmentImagesOutput">ListCuratedEnvironmentImagesOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.ListCuratedEnvironmentImagesError.html" title="enum rusoto_codebuild::ListCuratedEnvironmentImagesError">ListCuratedEnvironmentImagesError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1833-1860' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets information about Docker images that are managed by AWS CodeBuild.</p>
+</div><h4 id='method.list_projects' class="method"><span id='list_projects.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.list_projects' class='fnname'>list_projects</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.ListProjectsInput.html" title="struct rusoto_codebuild::ListProjectsInput">ListProjectsInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.ListProjectsOutput.html" title="struct rusoto_codebuild::ListProjectsOutput">ListProjectsOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.ListProjectsError.html" title="enum rusoto_codebuild::ListProjectsError">ListProjectsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1864-1892' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Gets a list of build project names, with each build project name representing a single build project.</p>
+</div><h4 id='method.start_build' class="method"><span id='start_build.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.start_build' class='fnname'>start_build</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.StartBuildInput.html" title="struct rusoto_codebuild::StartBuildInput">StartBuildInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.StartBuildOutput.html" title="struct rusoto_codebuild::StartBuildOutput">StartBuildOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.StartBuildError.html" title="enum rusoto_codebuild::StartBuildError">StartBuildError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1896-1922' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Starts running a build.</p>
+</div><h4 id='method.stop_build' class="method"><span id='stop_build.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.stop_build' class='fnname'>stop_build</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.StopBuildInput.html" title="struct rusoto_codebuild::StopBuildInput">StopBuildInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.StopBuildOutput.html" title="struct rusoto_codebuild::StopBuildOutput">StopBuildOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.StopBuildError.html" title="enum rusoto_codebuild::StopBuildError">StopBuildError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1926-1951' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Attempts to stop running a build.</p>
+</div><h4 id='method.update_project' class="method"><span id='update_project.v' class='invisible'><code>fn <a href='../rusoto_codebuild/trait.CodeBuild.html#tymethod.update_project' class='fnname'>update_project</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_codebuild/struct.UpdateProjectInput.html" title="struct rusoto_codebuild::UpdateProjectInput">UpdateProjectInput</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_codebuild/struct.UpdateProjectOutput.html" title="struct rusoto_codebuild::UpdateProjectOutput">UpdateProjectOutput</a>, <a class="enum" href="../rusoto_codebuild/enum.UpdateProjectError.html" title="enum rusoto_codebuild::UpdateProjectError">UpdateProjectError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_codebuild/generated.rs.html#1955-1983' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Changes the settings of a build project.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_codebuild";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

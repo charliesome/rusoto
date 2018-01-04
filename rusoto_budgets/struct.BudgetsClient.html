@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `BudgetsClient` struct in crate `rusoto_budgets`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, BudgetsClient">
+
+    <title>rusoto_budgets::BudgetsClient - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct BudgetsClient</p><div class="block items"><ul><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='index.html'>rusoto_budgets</a></p><script>window.sidebarCurrent = {name: 'BudgetsClient', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='index.html'>rusoto_budgets</a>::<wbr><a class="struct" href=''>BudgetsClient</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1682-1689' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct BudgetsClient&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span> { /* fields omitted */ }</pre><div class='docblock'><p>A client for the AWSBudgets API.</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="struct" href="../rusoto_budgets/struct.BudgetsClient.html" title="struct rusoto_budgets::BudgetsClient">BudgetsClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1691-1702' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;request_dispatcher: D, <br>&nbsp;&nbsp;&nbsp;&nbsp;credentials_provider: P, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="enum" href="../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a><br>) -&gt; Self</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1695-1701' title='goto source code'>[src]</a></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Budgets' class='impl'><span class='in-band'><code>impl&lt;P, D&gt; <a class="trait" href="../rusoto_budgets/trait.Budgets.html" title="trait rusoto_budgets::Budgets">Budgets</a> for <a class="struct" href="../rusoto_budgets/struct.BudgetsClient.html" title="struct rusoto_budgets::BudgetsClient">BudgetsClient</a>&lt;P, D&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;P: <a class="trait" href="../rusoto_credential/trait.ProvideAwsCredentials.html" title="trait rusoto_credential::ProvideAwsCredentials">ProvideAwsCredentials</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;D: <a class="trait" href="../rusoto_core/request/trait.DispatchSignedRequest.html" title="trait rusoto_core::request::DispatchSignedRequest">DispatchSignedRequest</a>,&nbsp;</span></code><a href='#impl-Budgets' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1704-2118' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.create_budget' class="method"><span id='create_budget.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.create_budget' class='fnname'>create_budget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.CreateBudgetRequest.html" title="struct rusoto_budgets::CreateBudgetRequest">CreateBudgetRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.CreateBudgetResponse.html" title="struct rusoto_budgets::CreateBudgetResponse">CreateBudgetResponse</a>, <a class="enum" href="../rusoto_budgets/enum.CreateBudgetError.html" title="enum rusoto_budgets::CreateBudgetError">CreateBudgetError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1709-1737' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new budget</p>
+</div><h4 id='method.create_notification' class="method"><span id='create_notification.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.create_notification' class='fnname'>create_notification</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.CreateNotificationRequest.html" title="struct rusoto_budgets::CreateNotificationRequest">CreateNotificationRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.CreateNotificationResponse.html" title="struct rusoto_budgets::CreateNotificationResponse">CreateNotificationResponse</a>, <a class="enum" href="../rusoto_budgets/enum.CreateNotificationError.html" title="enum rusoto_budgets::CreateNotificationError">CreateNotificationError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1741-1767' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new Notification with subscribers for a budget</p>
+</div><h4 id='method.create_subscriber' class="method"><span id='create_subscriber.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.create_subscriber' class='fnname'>create_subscriber</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.CreateSubscriberRequest.html" title="struct rusoto_budgets::CreateSubscriberRequest">CreateSubscriberRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.CreateSubscriberResponse.html" title="struct rusoto_budgets::CreateSubscriberResponse">CreateSubscriberResponse</a>, <a class="enum" href="../rusoto_budgets/enum.CreateSubscriberError.html" title="enum rusoto_budgets::CreateSubscriberError">CreateSubscriberError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1771-1799' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Create a new Subscriber for a notification</p>
+</div><h4 id='method.delete_budget' class="method"><span id='delete_budget.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.delete_budget' class='fnname'>delete_budget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DeleteBudgetRequest.html" title="struct rusoto_budgets::DeleteBudgetRequest">DeleteBudgetRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DeleteBudgetResponse.html" title="struct rusoto_budgets::DeleteBudgetResponse">DeleteBudgetResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DeleteBudgetError.html" title="enum rusoto_budgets::DeleteBudgetError">DeleteBudgetError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1803-1831' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Delete a budget and related notifications</p>
+</div><h4 id='method.delete_notification' class="method"><span id='delete_notification.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.delete_notification' class='fnname'>delete_notification</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DeleteNotificationRequest.html" title="struct rusoto_budgets::DeleteNotificationRequest">DeleteNotificationRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DeleteNotificationResponse.html" title="struct rusoto_budgets::DeleteNotificationResponse">DeleteNotificationResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DeleteNotificationError.html" title="enum rusoto_budgets::DeleteNotificationError">DeleteNotificationError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1835-1861' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Delete a notification and related subscribers</p>
+</div><h4 id='method.delete_subscriber' class="method"><span id='delete_subscriber.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.delete_subscriber' class='fnname'>delete_subscriber</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DeleteSubscriberRequest.html" title="struct rusoto_budgets::DeleteSubscriberRequest">DeleteSubscriberRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DeleteSubscriberResponse.html" title="struct rusoto_budgets::DeleteSubscriberResponse">DeleteSubscriberResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DeleteSubscriberError.html" title="enum rusoto_budgets::DeleteSubscriberError">DeleteSubscriberError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1865-1893' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Delete a Subscriber for a notification</p>
+</div><h4 id='method.describe_budget' class="method"><span id='describe_budget.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.describe_budget' class='fnname'>describe_budget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DescribeBudgetRequest.html" title="struct rusoto_budgets::DescribeBudgetRequest">DescribeBudgetRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DescribeBudgetResponse.html" title="struct rusoto_budgets::DescribeBudgetResponse">DescribeBudgetResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DescribeBudgetError.html" title="enum rusoto_budgets::DescribeBudgetError">DescribeBudgetError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1897-1925' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get a single budget</p>
+</div><h4 id='method.describe_budgets' class="method"><span id='describe_budgets.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.describe_budgets' class='fnname'>describe_budgets</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DescribeBudgetsRequest.html" title="struct rusoto_budgets::DescribeBudgetsRequest">DescribeBudgetsRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DescribeBudgetsResponse.html" title="struct rusoto_budgets::DescribeBudgetsResponse">DescribeBudgetsResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DescribeBudgetsError.html" title="enum rusoto_budgets::DescribeBudgetsError">DescribeBudgetsError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1929-1957' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get all budgets for an account</p>
+</div><h4 id='method.describe_notifications_for_budget' class="method"><span id='describe_notifications_for_budget.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.describe_notifications_for_budget' class='fnname'>describe_notifications_for_budget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DescribeNotificationsForBudgetRequest.html" title="struct rusoto_budgets::DescribeNotificationsForBudgetRequest">DescribeNotificationsForBudgetRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DescribeNotificationsForBudgetResponse.html" title="struct rusoto_budgets::DescribeNotificationsForBudgetResponse">DescribeNotificationsForBudgetResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DescribeNotificationsForBudgetError.html" title="enum rusoto_budgets::DescribeNotificationsForBudgetError">DescribeNotificationsForBudgetError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1961-1990' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get notifications of a budget</p>
+</div><h4 id='method.describe_subscribers_for_notification' class="method"><span id='describe_subscribers_for_notification.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.describe_subscribers_for_notification' class='fnname'>describe_subscribers_for_notification</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.DescribeSubscribersForNotificationRequest.html" title="struct rusoto_budgets::DescribeSubscribersForNotificationRequest">DescribeSubscribersForNotificationRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.DescribeSubscribersForNotificationResponse.html" title="struct rusoto_budgets::DescribeSubscribersForNotificationResponse">DescribeSubscribersForNotificationResponse</a>, <a class="enum" href="../rusoto_budgets/enum.DescribeSubscribersForNotificationError.html" title="enum rusoto_budgets::DescribeSubscribersForNotificationError">DescribeSubscribersForNotificationError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#1994-2023' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Get subscribers of a notification</p>
+</div><h4 id='method.update_budget' class="method"><span id='update_budget.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.update_budget' class='fnname'>update_budget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.UpdateBudgetRequest.html" title="struct rusoto_budgets::UpdateBudgetRequest">UpdateBudgetRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.UpdateBudgetResponse.html" title="struct rusoto_budgets::UpdateBudgetResponse">UpdateBudgetResponse</a>, <a class="enum" href="../rusoto_budgets/enum.UpdateBudgetError.html" title="enum rusoto_budgets::UpdateBudgetError">UpdateBudgetError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#2027-2055' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Update the information of a budget already created</p>
+</div><h4 id='method.update_notification' class="method"><span id='update_notification.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.update_notification' class='fnname'>update_notification</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.UpdateNotificationRequest.html" title="struct rusoto_budgets::UpdateNotificationRequest">UpdateNotificationRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.UpdateNotificationResponse.html" title="struct rusoto_budgets::UpdateNotificationResponse">UpdateNotificationResponse</a>, <a class="enum" href="../rusoto_budgets/enum.UpdateNotificationError.html" title="enum rusoto_budgets::UpdateNotificationError">UpdateNotificationError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#2059-2085' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Update the information about a notification already created</p>
+</div><h4 id='method.update_subscriber' class="method"><span id='update_subscriber.v' class='invisible'><code>fn <a href='../rusoto_budgets/trait.Budgets.html#tymethod.update_subscriber' class='fnname'>update_subscriber</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;input: &amp;<a class="struct" href="../rusoto_budgets/struct.UpdateSubscriberRequest.html" title="struct rusoto_budgets::UpdateSubscriberRequest">UpdateSubscriberRequest</a><br>) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html" title="enum core::result::Result">Result</a>&lt;<a class="struct" href="../rusoto_budgets/struct.UpdateSubscriberResponse.html" title="struct rusoto_budgets::UpdateSubscriberResponse">UpdateSubscriberResponse</a>, <a class="enum" href="../rusoto_budgets/enum.UpdateSubscriberError.html" title="enum rusoto_budgets::UpdateSubscriberError">UpdateSubscriberError</a>&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/rusoto_budgets/generated.rs.html#2089-2117' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Update a subscriber</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "rusoto_budgets";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

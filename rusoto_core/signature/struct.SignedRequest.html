@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SignedRequest` struct in crate `rusoto_core`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SignedRequest">
+
+    <title>rusoto_core::signature::SignedRequest - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct SignedRequest</p><div class="block items"><ul><li><a href="#fields">Fields</a></li><li><a href="#methods">Methods</a></li><li><a href="#implementations">Trait Implementations</a></li></ul></div><p class='location'><a href='../index.html'>rusoto_core</a>::<wbr><a href='index.html'>signature</a></p><script>window.sidebarCurrent = {name: 'SignedRequest', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>rusoto_core</a>::<wbr><a href='index.html'>signature</a>::<wbr><a class="struct" href=''>SignedRequest</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/rusoto_core/signature.rs.html#28-51' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SignedRequest {
+    pub method: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>,
+    pub service: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>,
+    pub region: <a class="enum" href="../../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a>,
+    pub path: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>,
+    pub headers: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/btree/map/struct.BTreeMap.html" title="struct alloc::btree::map::BTreeMap">BTreeMap</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;&gt;,
+    pub params: <a class="type" href="../../rusoto_core/param/type.Params.html" title="type rusoto_core::param::Params">Params</a>,
+    pub scheme: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;,
+    pub hostname: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;,
+    pub payload: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;,
+    pub canonical_query_string: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>,
+    pub canonical_uri: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>,
+}</pre><div class='docblock'><p>A data structure for all the elements of an HTTP request that are involved in
+the Amazon Signature Version 4 signing process</p>
+</div><h2 id='fields' class='fields small-section-header'>
+                       Fields<a href='#fields' class='anchor'></a></h2><span id="structfield.method" class="structfield small-section-header">
+                           <a href="#structfield.method" class="anchor field"></a>
+                           <span id="method.v" class='invisible'>
+                           <code>method: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code>
+                           </span></span><div class='docblock'><p>The HTTP Method</p>
+</div><span id="structfield.service" class="structfield small-section-header">
+                           <a href="#structfield.service" class="anchor field"></a>
+                           <span id="service.v" class='invisible'>
+                           <code>service: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code>
+                           </span></span><div class='docblock'><p>The AWS Service</p>
+</div><span id="structfield.region" class="structfield small-section-header">
+                           <a href="#structfield.region" class="anchor field"></a>
+                           <span id="region.v" class='invisible'>
+                           <code>region: <a class="enum" href="../../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a></code>
+                           </span></span><div class='docblock'><p>The AWS Region</p>
+</div><span id="structfield.path" class="structfield small-section-header">
+                           <a href="#structfield.path" class="anchor field"></a>
+                           <span id="path.v" class='invisible'>
+                           <code>path: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code>
+                           </span></span><div class='docblock'><p>The HTTP request path</p>
+</div><span id="structfield.headers" class="structfield small-section-header">
+                           <a href="#structfield.headers" class="anchor field"></a>
+                           <span id="headers.v" class='invisible'>
+                           <code>headers: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/btree/map/struct.BTreeMap.html" title="struct alloc::btree::map::BTreeMap">BTreeMap</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;&gt;</code>
+                           </span></span><div class='docblock'><p>The HTTP Request Headers</p>
+</div><span id="structfield.params" class="structfield small-section-header">
+                           <a href="#structfield.params" class="anchor field"></a>
+                           <span id="params.v" class='invisible'>
+                           <code>params: <a class="type" href="../../rusoto_core/param/type.Params.html" title="type rusoto_core::param::Params">Params</a></code>
+                           </span></span><div class='docblock'><p>The HTTP request paramaters</p>
+</div><span id="structfield.scheme" class="structfield small-section-header">
+                           <a href="#structfield.scheme" class="anchor field"></a>
+                           <span id="scheme.v" class='invisible'>
+                           <code>scheme: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The HTTP/HTTPS protocol</p>
+</div><span id="structfield.hostname" class="structfield small-section-header">
+                           <a href="#structfield.hostname" class="anchor field"></a>
+                           <span id="hostname.v" class='invisible'>
+                           <code>hostname: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;</code>
+                           </span></span><div class='docblock'><p>The AWS hostname</p>
+</div><span id="structfield.payload" class="structfield small-section-header">
+                           <a href="#structfield.payload" class="anchor field"></a>
+                           <span id="payload.v" class='invisible'>
+                           <code>payload: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;</code>
+                           </span></span><div class='docblock'><p>The HTTP Content</p>
+</div><span id="structfield.canonical_query_string" class="structfield small-section-header">
+                           <a href="#structfield.canonical_query_string" class="anchor field"></a>
+                           <span id="canonical_query_string.v" class='invisible'>
+                           <code>canonical_query_string: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code>
+                           </span></span><div class='docblock'><p>The Standardised query string</p>
+</div><span id="structfield.canonical_uri" class="structfield small-section-header">
+                           <a href="#structfield.canonical_uri" class="anchor field"></a>
+                           <span id="canonical_uri.v" class='invisible'>
+                           <code>canonical_uri: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code>
+                           </span></span><div class='docblock'><p>The Standardised URI</p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../rusoto_core/signature/struct.SignedRequest.html" title="struct rusoto_core::signature::SignedRequest">SignedRequest</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#53-283' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class="method"><span id='new.v' class='invisible'><code>pub fn <a href='#method.new' class='fnname'>new</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;method: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;service: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: &amp;<a class="enum" href="../../rusoto_core/region/enum.Region.html" title="enum rusoto_core::region::Region">Region</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;path: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a><br>) -&gt; <a class="struct" href="../../rusoto_core/signature/struct.SignedRequest.html" title="struct rusoto_core::signature::SignedRequest">SignedRequest</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#55-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Default constructor</p>
+</div><h4 id='method.set_content_type' class="method"><span id='set_content_type.v' class='invisible'><code>pub fn <a href='#method.set_content_type' class='fnname'>set_content_type</a>(&amp;mut self, content_type: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#72-74' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the value of the &quot;content-type&quot; header.</p>
+</div><h4 id='method.set_hostname' class="method"><span id='set_hostname.v' class='invisible'><code>pub fn <a href='#method.set_hostname' class='fnname'>set_hostname</a>(&amp;mut self, hostname: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#77-79' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the target hostname</p>
+</div><h4 id='method.set_endpoint_prefix' class="method"><span id='set_endpoint_prefix.v' class='invisible'><code>pub fn <a href='#method.set_endpoint_prefix' class='fnname'>set_endpoint_prefix</a>(&amp;mut self, endpoint_prefix: <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#84-86' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the target hostname using the current service type and region</p>
+
+<p>See the implementation of build_hostname to see how this is done</p>
+</div><h4 id='method.set_payload' class="method"><span id='set_payload.v' class='invisible'><code>pub fn <a href='#method.set_payload' class='fnname'>set_payload</a>(&amp;mut self, payload: <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#89-91' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets the new body (payload)</p>
+</div><h4 id='method.method' class="method"><span id='method.v-1' class='invisible'><code>pub fn <a href='#method.method' class='fnname'>method</a>(&amp;self) -&gt; &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#94-96' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current HTTP method</p>
+</div><h4 id='method.path' class="method"><span id='path.v-1' class='invisible'><code>pub fn <a href='#method.path' class='fnname'>path</a>(&amp;self) -&gt; &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#99-101' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current path</p>
+</div><h4 id='method.canonical_path' class="method"><span id='canonical_path.v' class='invisible'><code>pub fn <a href='#method.canonical_path' class='fnname'>canonical_path</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#104-106' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Invokes <code>canonical_uri(path)</code> to return a canonical path</p>
+</div><h4 id='method.canonical_uri' class="method"><span id='canonical_uri.v-1' class='invisible'><code>pub fn <a href='#method.canonical_uri' class='fnname'>canonical_uri</a>(&amp;self) -&gt; &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#109-111' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current canonical URI</p>
+</div><h4 id='method.canonical_query_string' class="method"><span id='canonical_query_string.v-1' class='invisible'><code>pub fn <a href='#method.canonical_query_string' class='fnname'>canonical_query_string</a>(&amp;self) -&gt; &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#116-118' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current query string</p>
+
+<p>Converts a paramater such as &quot;example param&quot;: &quot;examplekey&quot; into &quot;&amp;example+param=examplekey&quot;</p>
+</div><h4 id='method.headers' class="method"><span id='headers.v-1' class='invisible'><code>pub fn <a href='#method.headers' class='fnname'>headers</a>(&amp;self) -&gt; &amp;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/btree/map/struct.BTreeMap.html" title="struct alloc::btree::map::BTreeMap">BTreeMap</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>, <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>&gt;&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#121-123' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current headers</p>
+</div><h4 id='method.scheme' class="method"><span id='scheme.v-1' class='invisible'><code>pub fn <a href='#method.scheme' class='fnname'>scheme</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#126-142' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Returns the current http scheme (https or http)</p>
+</div><h4 id='method.hostname' class="method"><span id='hostname.v-1' class='invisible'><code>pub fn <a href='#method.hostname' class='fnname'>hostname</a>(&amp;self) -&gt; <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#145-151' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Converts hostname to String if it exists, else it invokes build_hostname()</p>
+</div><h4 id='method.remove_header' class="method"><span id='remove_header.v' class='invisible'><code>pub fn <a href='#method.remove_header' class='fnname'>remove_header</a>(&amp;mut self, key: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#154-157' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>If the key exists in headers, set it to blank/unoccupied:</p>
+</div><h4 id='method.add_header' class="method"><span id='add_header.v' class='invisible'><code>pub fn <a href='#method.add_header' class='fnname'>add_header</a>&lt;K:&nbsp;<a class="trait" href="https://doc.rust-lang.org/nightly/alloc/string/trait.ToString.html" title="trait alloc::string::ToString">ToString</a>&gt;(&amp;mut self, key: K, value: &amp;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.str.html">str</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#161-175' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Add a value to the array of headers for the specified key.
+Headers are kept sorted by key name for use at signing (BTreeMap)</p>
+</div><h4 id='method.add_param' class="method"><span id='add_param.v' class='invisible'><code>pub fn <a href='#method.add_param' class='fnname'>add_param</a>&lt;S&gt;(&amp;mut self, key: S, value: S) <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;S: <a class="trait" href="https://doc.rust-lang.org/nightly/core/convert/trait.Into.html" title="trait core::convert::Into">Into</a>&lt;<a class="struct" href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html" title="struct alloc::string::String">String</a>&gt;,&nbsp;</span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#178-181' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Adds parameter to the HTTP Request</p>
+</div><h4 id='method.set_params' class="method"><span id='set_params.v' class='invisible'><code>pub fn <a href='#method.set_params' class='fnname'>set_params</a>(&amp;mut self, params: <a class="type" href="../../rusoto_core/param/type.Params.html" title="type rusoto_core::param::Params">Params</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#184-186' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Sets paramaters with a given variable of <code>Params</code> type</p>
+</div><h4 id='method.sign' class="method"><span id='sign.v' class='invisible'><code>pub fn <a href='#method.sign' class='fnname'>sign</a>(&amp;mut self, creds: &amp;<a class="struct" href="../../rusoto_core/struct.AwsCredentials.html" title="struct rusoto_core::AwsCredentials">AwsCredentials</a>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#190-192' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Signs the request using Amazon Signature version 4 to verify identity.
+Authorization header uses AWS4-HMAC-SHA256 for signing.</p>
+</div><h4 id='method.sign_with_plus' class="method"><span id='sign_with_plus.v' class='invisible'><code>pub fn <a href='#method.sign_with_plus' class='fnname'>sign_with_plus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;mut self, <br>&nbsp;&nbsp;&nbsp;&nbsp;creds: &amp;<a class="struct" href="../../rusoto_core/struct.AwsCredentials.html" title="struct rusoto_core::AwsCredentials">AwsCredentials</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;should_treat_plus_literally: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#196-282' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Signs the request using Amazon Signature version 4 to verify identity.
+Authorization header uses AWS4-HMAC-SHA256 for signing.</p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-Debug' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html" title="trait core::fmt::Debug">Debug</a> for <a class="struct" href="../../rusoto_core/signature/struct.SignedRequest.html" title="struct rusoto_core::signature::SignedRequest">SignedRequest</a></code><a href='#impl-Debug' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#27' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class="method"><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class="struct" href="https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html" title="struct core::fmt::Formatter">Formatter</a>) -&gt; <a class="type" href="https://doc.rust-lang.org/nightly/core/fmt/type.Result.html" title="type core::fmt::Result">Result</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/rusoto_core/signature.rs.html#27' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "rusoto_core";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
