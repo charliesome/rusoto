@@ -213,9 +213,9 @@ pub type Memo<'a> = HashMap<&'a str, Ownership>;
 
 pub fn get_rust_type<'a>(
   memo: &mut Memo<'a>,
-  service: &Service,
-  shape_name: &str,
-  shape: &Shape,
+  service: &'a Service,
+  shape_name: &'a str,
+  shape: &'a Shape,
   streaming: bool,
   for_timestamps: &str
 ) -> (String, Ownership) {
@@ -236,7 +236,7 @@ pub fn get_rust_type<'a>(
                   service.get_shape(shape.member_type()).unwrap(),
                   false,
                   for_timestamps);
-                let ownership = get_shape_ownership(service, service.get_shape(shape.member_type()).unwrap());
+                let ownership = get_shape_ownership(memo, service, service.get_shape(shape.member_type()).unwrap());
 
                 (format!("Vec<{}>",
                         list_type), ownership)
@@ -253,7 +253,7 @@ pub fn get_rust_type<'a>(
                   value_type), aggregate_ownership)
             }
             ShapeType::Structure => {
-              let structure_ownership = get_shape_ownership(service, shape);
+              let structure_ownership = get_shape_ownership(memo, service, shape);
               let lifetime = if structure_ownership == Ownership::Borrowed { "<'a>" } else { "" };
               (format!("{}{}", mutate_type_name(shape_name), lifetime), structure_ownership)
             }
@@ -261,38 +261,38 @@ pub fn get_rust_type<'a>(
     } else {
         (mutate_type_name_for_streaming(shape_name), Ownership::Owned)
     }
-                     }
-
-fn get_shape_ownership(service: &Service, shape: &Shape) -> Ownership {
-  shape.members
-    .iter()
-    .flat_map(|members| members.values())
-    .chain(shape.member.as_ref())
-    .map(|member| get_member_ownership(service, member))
-    .fold(Ownership::default(), Ownership::append)
 }
 
-fn get_member_ownership(service: &Service, member: &Member) -> Ownership {
-  if let Some(member_shape) = service.get_shape(&member.shape) {
-    match member_shape.shape_type {
-      ShapeType::String => return Ownership::Borrowed,
-      ShapeType::Map => {
-        let key_ownership = get_shape_ownership(service, service.get_shape(member_shape.key_type()).unwrap());
-        let value_ownership = get_shape_ownership(service, service.get_shape(member_shape.value_type()).unwrap());
+fn get_shape_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, shape: &'a Shape) -> Ownership {
+    shape.members
+        .iter()
+        .flat_map(|members| members.values())
+        .chain(shape.member.as_ref())
+        .map(|member| get_member_ownership(memo, service, member))
+        .fold(Ownership::default(), Ownership::append)
+}
 
-        key_ownership.append(value_ownership)
-      }
-      ShapeType::List => {
-        get_shape_ownership(service, service.get_shape(member_shape.member_type()).unwrap())
-      }
-      ShapeType::Structure => {
-        get_shape_ownership(service, member_shape)
-      }
-      _ => Ownership::default()
+fn get_member_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, member: &'a Member) -> Ownership {
+    if let Some(member_shape) = service.get_shape(&member.shape) {
+        match member_shape.shape_type {
+            ShapeType::String => return Ownership::Borrowed,
+            ShapeType::Map => {
+                let key_ownership = get_shape_ownership(memo, service, service.get_shape(member_shape.key_type()).unwrap());
+                let value_ownership = get_shape_ownership(memo, service, service.get_shape(member_shape.value_type()).unwrap());
+
+                key_ownership.append(value_ownership)
+            }
+            ShapeType::List => {
+                get_shape_ownership(memo, service, service.get_shape(member_shape.member_type()).unwrap())
+            }
+            ShapeType::Structure => {
+                get_shape_ownership(memo, service, member_shape)
+            }
+            _ => Ownership::default()
+        }
+    } else {
+        Ownership::default()
     }
-  } else {
-    Ownership::default()
-  }
 }
 
 fn has_streaming_member(name: &str, shape: &Shape) -> bool {
@@ -434,9 +434,9 @@ fn generate_types<P>(writer: &mut FileWriter, service: &Service, protocol_genera
 
 fn generate_struct<'a, P>(
   memo: &mut Memo<'a>,
-  service: &Service,
+  service: &'a Service,
   name: &'a str,
-  shape: &Shape,
+  shape: &'a Shape,
   serialized: bool,
   deserialized: bool,
   protocol_generator: &P
@@ -475,8 +475,8 @@ fn generate_struct<'a, P>(
 
 fn generate_struct_fields<'a, P: GenerateProtocol>(
   memo: &mut Memo<'a>,
-  service: &Service,
-  shape: &Shape,
+  service: &'a Service,
+  shape: &'a Shape,
   shape_name: &'a str,
   serde_attrs: bool,
   protocol_generator: &P
