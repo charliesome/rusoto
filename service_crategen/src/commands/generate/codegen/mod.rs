@@ -4,7 +4,7 @@ use std::io::{Write, BufWriter};
 use inflector::Inflector;
 
 use Service;
-use botocore::{Shape, ShapeType};
+use botocore::{Shape, ShapeType, Member};
 use self::json::JsonGenerator;
 use self::query::QueryGenerator;
 use self::rest_json::RestJsonGenerator;
@@ -187,42 +187,110 @@ fn generate_client<P>(writer: &mut FileWriter,
     writeln!(writer, "}}")
 }
 
+#[derive(PartialEq, Eq)]
+pub enum Ownership {
+  Owned,
+  Borrowed,
+}
+
 pub fn get_rust_type(service: &Service,
                      shape_name: &str,
                      shape: &Shape,
                      streaming: bool,
                      for_timestamps: &str)
-                     -> String {
+                     -> (String, Ownership) {
     if !streaming {
         match shape.shape_type {
-            ShapeType::Blob => "Vec<u8>".into(),
-            ShapeType::Boolean => "bool".into(),
-            ShapeType::Double => "f64".into(),
-            ShapeType::Float => "f32".into(),
-            ShapeType::Integer | ShapeType::Long => "i64".into(),
-            ShapeType::String => "String".into(),
-            ShapeType::Timestamp => for_timestamps.into(),
+            ShapeType::Blob => ("Vec<u8>".into(), Ownership::Owned),
+            ShapeType::Boolean => ("bool".into(), Ownership::Owned),
+            ShapeType::Double => ("f64".into(), Ownership::Owned),
+            ShapeType::Float => ("f32".into(), Ownership::Owned),
+            ShapeType::Integer | ShapeType::Long => ("i64".into(), Ownership::Owned),
+            ShapeType::String => ("&'a str".into(), Ownership::Borrowed),
+            ShapeType::Timestamp => (for_timestamps.into(), Ownership::Owned),
             ShapeType::List => {
-                format!("Vec<{}>",
-                        get_rust_type(service,
-                                      shape.member_type(),
-                                      service.get_shape(shape.member_type()).unwrap(),
-                                      false,
-                                      for_timestamps))
+                let (list_type, _) = get_rust_type(service,
+                  shape.member_type(),
+                  service.get_shape(shape.member_type()).unwrap(),
+                  false,
+                  for_timestamps);
+                let ownership = get_shape_ownership(service, service.get_shape(shape.member_type()).unwrap());
+
+                (format!("Vec<{}>",
+                        list_type), ownership)
             }
             ShapeType::Map => {
-                format!(
-                    "::std::collections::HashMap<{}, {}>",
-                    get_rust_type(service, shape.key_type(), service.get_shape(shape.key_type()).unwrap(), false, for_timestamps),
-                    get_rust_type(service, shape.value_type(), service.get_shape(shape.value_type()).unwrap(), false, for_timestamps),
-                    )
+              let (key_type, key_ownership) = get_rust_type(service, shape.key_type(), service.get_shape(shape.key_type()).unwrap(), false, for_timestamps);
+              let (value_type, value_ownership) = get_rust_type(service, shape.value_type(), service.get_shape(shape.value_type()).unwrap(), false, for_timestamps);
+
+              let aggregate_ownership = if key_ownership == Ownership::Borrowed { Ownership::Borrowed } else { value_ownership };
+
+              (format!(
+                  "::std::collections::HashMap<{}, {}>",
+                  key_type,
+                  value_type), aggregate_ownership)
             }
-            ShapeType::Structure => mutate_type_name(shape_name),
+            ShapeType::Structure => {
+              let structure_ownership = get_shape_ownership(service, shape);
+              let lifetime = if structure_ownership == Ownership::Borrowed { "<'a>" } else { "" };
+              (format!("{}{}", mutate_type_name(shape_name), lifetime), structure_ownership)
+            }
         }
     } else {
-        mutate_type_name_for_streaming(shape_name)
+        (mutate_type_name_for_streaming(shape_name), Ownership::Owned)
     }
                      }
+
+fn get_shape_ownership(service: &Service, shape: &Shape) -> Ownership {
+  if let Some(ref members) = shape.members {
+    for (_, member) in members.iter() {
+      let member_ownership = get_member_ownership(service, member);
+      if member_ownership == Ownership::Borrowed {
+        return Ownership::Borrowed;
+      }
+    }
+  }
+
+  if let Some(ref member) = shape.member {
+    let member_ownership = get_member_ownership(service, member);
+    if member_ownership == Ownership::Borrowed {
+      return Ownership::Borrowed;
+    }
+  }
+
+  Ownership::Owned
+}
+
+fn get_member_ownership(service: &Service, member: &Member) -> Ownership {
+  if let Some(member_shape) = service.get_shape(&member.shape) {
+    match member_shape.shape_type {
+      ShapeType::String => return Ownership::Borrowed,
+      ShapeType::Map => {
+        let key_ownership = get_shape_ownership(service, service.get_shape(member_shape.key_type()).unwrap());
+        let value_ownership = get_shape_ownership(service, service.get_shape(member_shape.value_type()).unwrap());
+
+        if key_ownership == Ownership::Borrowed || value_ownership == Ownership::Borrowed {
+          return Ownership::Borrowed;
+        }
+      }
+      ShapeType::List => {
+        let value_ownership = get_shape_ownership(service, service.get_shape(member_shape.member_type()).unwrap());
+        if value_ownership == Ownership::Borrowed {
+          return Ownership::Borrowed;
+        }
+      }
+      ShapeType::Structure => {
+        let child_ownership = get_shape_ownership(service, member_shape);
+        if child_ownership == Ownership::Borrowed {
+          return Ownership::Borrowed;
+        }
+      }
+      _ => {}
+    }
+  }
+
+  Ownership::Owned
+}
 
 fn has_streaming_member(name: &str, shape: &Shape) -> bool {
     shape.shape_type == ShapeType::Structure &&
@@ -382,15 +450,18 @@ fn generate_struct<P>(service: &Service,
             protocol_generator.generate_struct_attributes(serialized, deserialized);
         // Serde attributes are only needed if deriving the Serialize or Deserialize trait
         let need_serde_attrs = struct_attributes.contains("erialize");
+
+        let (struct_fields, ownership) = generate_struct_fields(service, shape, name, need_serde_attrs, protocol_generator);
         format!(
             "{attributes}
-            pub struct {name} {{
+            pub struct {name}{lifetime} {{
                 {struct_fields}
             }}
             ",
             attributes = struct_attributes,
             name = name,
-            struct_fields = generate_struct_fields(service, shape, name, need_serde_attrs, protocol_generator),
+            lifetime = if ownership == Ownership::Owned { "" } else { "<'a>" },
+            struct_fields = struct_fields,
         )
     }
 }
@@ -400,8 +471,9 @@ fn generate_struct_fields<P: GenerateProtocol>(service: &Service,
                                                shape_name: &str,
                                                serde_attrs: bool,
                                                protocol_generator: &P)
-                                               -> String {
-    shape.members.as_ref().unwrap().iter().filter_map(|(member_name, member)| {
+                                               -> (String, Ownership) {
+    let mut ownership = Ownership::Owned;
+    let fields = shape.members.as_ref().unwrap().iter().filter_map(|(member_name, member)| {
         if member.deprecated == Some(true) {
             return None;
         }
@@ -427,27 +499,37 @@ fn generate_struct_fields<P: GenerateProtocol>(service: &Service,
                 } else if !shape.required(member_name) {
                     lines.push("#[serde(skip_serializing_if=\"Option::is_none\")]".to_owned());
                 }
+
+                if shape_type == ShapeType::String {
+                  lines.push(
+                    "#[serde(borrow)]".to_owned()
+                  );
+                }
             }
         }
 
         let member_shape = service.shape_for_member(member).unwrap();
-        let rs_type = get_rust_type(service,
+        let (rs_type, rs_ownership) = get_rust_type(service,
                                     &member.shape,
                                     member_shape,
                                     member.streaming() && !is_input_shape(service, shape_name),
                                     protocol_generator.timestamp_type());
+        if rs_ownership == Ownership::Borrowed {
+          ownership = Ownership::Borrowed;
+        }
         let name = generate_field_name(member_name);
 
         if shape.required(member_name) {
             lines.push(format!("pub {}: {},", name, rs_type))
         } else if name == "type" {
-            lines.push(format!("pub aws_{}: Option<{}>,", name,rs_type))
+            lines.push(format!("pub aws_{}: Option<{}>,", name, rs_type))
         } else {
             lines.push(format!("pub {}: Option<{}>,", name, rs_type))
         }
 
         Some(lines.join("\n"))
-    }).collect::<Vec<String>>().join("\n")
+    }).collect::<Vec<String>>().join("\n");
+    (fields, ownership)
 }
 
 fn error_type_name(name: &str) -> String {
