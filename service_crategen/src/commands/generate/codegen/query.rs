@@ -6,7 +6,7 @@ use botocore::{Operation, Shape, ShapeType, Member};
 use util;
 
 use super::xml_payload_parser;
-use super::{IoResult, FileWriter, GenerateProtocol, error_type_name, generate_field_name, get_rust_type};
+use super::{IoResult, FileWriter, GenerateProtocol, Memo, error_type_name, generate_field_name, get_rust_type};
 
 pub struct QueryGenerator;
 
@@ -99,7 +99,7 @@ impl GenerateProtocol for QueryGenerator {
             return None;
         }
 
-        let (ty, _) = get_rust_type(service, name, shape, false, self.timestamp_type());
+        let (ty, _) = get_rust_type(&mut Memo::new(), service, name, shape, false, self.timestamp_type());
         Some(format!("
             /// Serialize `{name}` contents to a `SignedRequest`.
             struct {name}Serializer;
@@ -119,7 +119,7 @@ impl GenerateProtocol for QueryGenerator {
                              shape: &Shape,
                              service: &Service)
                              -> Option<String> {
-        let (ty, _) = get_rust_type(service, name, shape, false, self.timestamp_type());
+        let (ty, _) = get_rust_type(&mut Memo::new(), service, name, shape, false, self.timestamp_type());
         Some(xml_payload_parser::generate_deserializer(name, &ty, shape, service))
     }
 

@@ -194,6 +194,21 @@ pub enum Ownership {
   Borrowed,
 }
 
+impl Default for Ownership {
+  fn default() -> Self {
+    Ownership::Owned
+  }
+}
+
+impl Ownership {
+  pub fn append(self, other: Ownership) -> Ownership {
+    match (self, other) {
+      (Ownership::Owned, Ownership::Owned) => Ownership::Owned,
+      _ => Ownership::Borrowed,
+    }
+  }
+}
+
 pub type Memo<'a> = HashMap<&'a str, Ownership>;
 
 pub fn get_rust_type<'a>(
@@ -230,7 +245,7 @@ pub fn get_rust_type<'a>(
               let (key_type, key_ownership) = get_rust_type(memo, service, shape.key_type(), service.get_shape(shape.key_type()).unwrap(), false, for_timestamps);
               let (value_type, value_ownership) = get_rust_type(memo, service, shape.value_type(), service.get_shape(shape.value_type()).unwrap(), false, for_timestamps);
 
-              let aggregate_ownership = if key_ownership == Ownership::Borrowed { Ownership::Borrowed } else { value_ownership };
+              let aggregate_ownership = key_ownership.append(value_ownership);
 
               (format!(
                   "::std::collections::HashMap<{}, {}>",
@@ -249,23 +264,12 @@ pub fn get_rust_type<'a>(
                      }
 
 fn get_shape_ownership(service: &Service, shape: &Shape) -> Ownership {
-  if let Some(ref members) = shape.members {
-    for (_, member) in members.iter() {
-      let member_ownership = get_member_ownership(service, member);
-      if member_ownership == Ownership::Borrowed {
-        return Ownership::Borrowed;
-      }
-    }
-  }
-
-  if let Some(ref member) = shape.member {
-    let member_ownership = get_member_ownership(service, member);
-    if member_ownership == Ownership::Borrowed {
-      return Ownership::Borrowed;
-    }
-  }
-
-  Ownership::Owned
+  shape.members
+    .iter()
+    .flat_map(|members| members.values())
+    .chain(shape.member.as_ref())
+    .map(|member| get_member_ownership(service, member))
+    .fold(Ownership::default(), Ownership::append)
 }
 
 fn get_member_ownership(service: &Service, member: &Member) -> Ownership {
@@ -276,27 +280,19 @@ fn get_member_ownership(service: &Service, member: &Member) -> Ownership {
         let key_ownership = get_shape_ownership(service, service.get_shape(member_shape.key_type()).unwrap());
         let value_ownership = get_shape_ownership(service, service.get_shape(member_shape.value_type()).unwrap());
 
-        if key_ownership == Ownership::Borrowed || value_ownership == Ownership::Borrowed {
-          return Ownership::Borrowed;
-        }
+        key_ownership.append(value_ownership)
       }
       ShapeType::List => {
-        let value_ownership = get_shape_ownership(service, service.get_shape(member_shape.member_type()).unwrap());
-        if value_ownership == Ownership::Borrowed {
-          return Ownership::Borrowed;
-        }
+        get_shape_ownership(service, service.get_shape(member_shape.member_type()).unwrap())
       }
       ShapeType::Structure => {
-        let child_ownership = get_shape_ownership(service, member_shape);
-        if child_ownership == Ownership::Borrowed {
-          return Ownership::Borrowed;
-        }
+        get_shape_ownership(service, member_shape)
       }
-      _ => {}
+      _ => Ownership::default()
     }
+  } else {
+    Ownership::default()
   }
-
-  Ownership::Owned
 }
 
 fn has_streaming_member(name: &str, shape: &Shape) -> bool {

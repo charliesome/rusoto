@@ -5,7 +5,7 @@ use ::Service;
 use botocore::{Member, Operation, Shape, ShapeType};
 use super::{xml_payload_parser, rest_response_parser, rest_request_generator, get_rust_type,
             mutate_type_name};
-use super::{GenerateProtocol, generate_field_name, error_type_name};
+use super::{GenerateProtocol, Memo, generate_field_name, error_type_name};
 use super::{IoResult, FileWriter};
 
 pub struct RestXmlGenerator;
@@ -134,7 +134,7 @@ impl GenerateProtocol for RestXmlGenerator {
             }
         }
 
-        let (ty, _) = get_rust_type(service, name, shape, false, self.timestamp_type());
+        let (ty, _) = get_rust_type(&mut Memo::new(), service, name, shape, false, self.timestamp_type());
         Some(format!("
                 pub struct {name}Serializer;
                 impl {name}Serializer {{
@@ -154,7 +154,7 @@ impl GenerateProtocol for RestXmlGenerator {
                              shape: &Shape,
                              service: &Service)
                              -> Option<String> {
-        let (ty, _) = get_rust_type(service, name, shape, false, self.timestamp_type());
+        let (ty, _) = get_rust_type(&mut Memo::new(), service, name, shape, false, self.timestamp_type());
         Some(xml_payload_parser::generate_deserializer(name, &ty, shape, service))
     }
 
