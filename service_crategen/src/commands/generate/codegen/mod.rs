@@ -1,3 +1,4 @@
+use std::collections::HashMap;
 use std::fs::File;
 use std::io::{Write, BufWriter};
 
@@ -193,12 +194,16 @@ pub enum Ownership {
   Borrowed,
 }
 
-pub fn get_rust_type(service: &Service,
-                     shape_name: &str,
-                     shape: &Shape,
-                     streaming: bool,
-                     for_timestamps: &str)
-                     -> (String, Ownership) {
+pub type Memo<'a> = HashMap<&'a str, Ownership>;
+
+pub fn get_rust_type<'a>(
+  memo: &mut Memo<'a>,
+  service: &Service,
+  shape_name: &str,
+  shape: &Shape,
+  streaming: bool,
+  for_timestamps: &str
+) -> (String, Ownership) {
     if !streaming {
         match shape.shape_type {
             ShapeType::Blob => ("Vec<u8>".into(), Ownership::Owned),
@@ -209,7 +214,9 @@ pub fn get_rust_type(service: &Service,
             ShapeType::String => ("&'a str".into(), Ownership::Borrowed),
             ShapeType::Timestamp => (for_timestamps.into(), Ownership::Owned),
             ShapeType::List => {
-                let (list_type, _) = get_rust_type(service,
+                let (list_type, _) = get_rust_type(
+                  memo,
+                  service,
                   shape.member_type(),
                   service.get_shape(shape.member_type()).unwrap(),
                   false,
@@ -220,8 +227,8 @@ pub fn get_rust_type(service: &Service,
                         list_type), ownership)
             }
             ShapeType::Map => {
-              let (key_type, key_ownership) = get_rust_type(service, shape.key_type(), service.get_shape(shape.key_type()).unwrap(), false, for_timestamps);
-              let (value_type, value_ownership) = get_rust_type(service, shape.value_type(), service.get_shape(shape.value_type()).unwrap(), false, for_timestamps);
+              let (key_type, key_ownership) = get_rust_type(memo, service, shape.key_type(), service.get_shape(shape.key_type()).unwrap(), false, for_timestamps);
+              let (value_type, value_ownership) = get_rust_type(memo, service, shape.value_type(), service.get_shape(shape.value_type()).unwrap(), false, for_timestamps);
 
               let aggregate_ownership = if key_ownership == Ownership::Borrowed { Ownership::Borrowed } else { value_ownership };
 
@@ -366,12 +373,14 @@ fn generate_types<P>(writer: &mut FileWriter, service: &Service, protocol_genera
 
             // generate a rust type for the shape
             if type_name != "String" {
-                let generated = generate_struct(service,
-                                                &type_name,
-                                                shape,
-                                                serialized,
-                                                deserialized,
-                                                protocol_generator);
+                let generated = generate_struct(
+                  &mut Memo::new(),
+                  service,
+                  &type_name,
+                  shape,
+                  serialized,
+                  deserialized,
+                  protocol_generator);
                 writeln!(writer, "{}", generated)?;
             }
         }
@@ -427,13 +436,15 @@ fn generate_types<P>(writer: &mut FileWriter, service: &Service, protocol_genera
     Ok(())
 }
 
-fn generate_struct<P>(service: &Service,
-                      name: &str,
-                      shape: &Shape,
-                      serialized: bool,
-                      deserialized: bool,
-                      protocol_generator: &P)
-                      -> String
+fn generate_struct<'a, P>(
+  memo: &mut Memo<'a>,
+  service: &Service,
+  name: &'a str,
+  shape: &Shape,
+  serialized: bool,
+  deserialized: bool,
+  protocol_generator: &P
+) -> String
     where P: GenerateProtocol
 {
 
@@ -451,7 +462,7 @@ fn generate_struct<P>(service: &Service,
         // Serde attributes are only needed if deriving the Serialize or Deserialize trait
         let need_serde_attrs = struct_attributes.contains("erialize");
 
-        let (struct_fields, ownership) = generate_struct_fields(service, shape, name, need_serde_attrs, protocol_generator);
+        let (struct_fields, ownership) = generate_struct_fields(memo, service, shape, name, need_serde_attrs, protocol_generator);
         format!(
             "{attributes}
             pub struct {name}{lifetime} {{
@@ -466,12 +477,14 @@ fn generate_struct<P>(service: &Service,
     }
 }
 
-fn generate_struct_fields<P: GenerateProtocol>(service: &Service,
-                                               shape: &Shape,
-                                               shape_name: &str,
-                                               serde_attrs: bool,
-                                               protocol_generator: &P)
-                                               -> (String, Ownership) {
+fn generate_struct_fields<'a, P: GenerateProtocol>(
+  memo: &mut Memo<'a>,
+  service: &Service,
+  shape: &Shape,
+  shape_name: &'a str,
+  serde_attrs: bool,
+  protocol_generator: &P
+) -> (String, Ownership) {
     let mut ownership = Ownership::Owned;
     let fields = shape.members.as_ref().unwrap().iter().filter_map(|(member_name, member)| {
         if member.deprecated == Some(true) {
@@ -509,7 +522,9 @@ fn generate_struct_fields<P: GenerateProtocol>(service: &Service,
         }
 
         let member_shape = service.shape_for_member(member).unwrap();
-        let (rs_type, rs_ownership) = get_rust_type(service,
+        let (rs_type, rs_ownership) = get_rust_type(
+                                    memo,
+                                    service,
                                     &member.shape,
                                     member_shape,
                                     member.streaming() && !is_input_shape(service, shape_name),
