@@ -188,7 +188,7 @@ fn generate_client<P>(writer: &mut FileWriter,
     writeln!(writer, "}}")
 }
 
-#[derive(PartialEq, Eq)]
+#[derive(PartialEq, Eq, Clone, Copy)]
 pub enum Ownership {
   Owned,
   Borrowed,
@@ -236,7 +236,7 @@ pub fn get_rust_type<'a>(
                   service.get_shape(shape.member_type()).unwrap(),
                   false,
                   for_timestamps);
-                let ownership = get_shape_ownership(memo, service, service.get_shape(shape.member_type()).unwrap());
+                let ownership = get_shape_ownership(memo, service, shape.member_type());
 
                 (format!("Vec<{}>",
                         list_type), ownership)
@@ -253,7 +253,7 @@ pub fn get_rust_type<'a>(
                   value_type), aggregate_ownership)
             }
             ShapeType::Structure => {
-              let structure_ownership = get_shape_ownership(memo, service, shape);
+              let structure_ownership = get_shape_ownership(memo, service, shape_name);
               let lifetime = if structure_ownership == Ownership::Borrowed { "<'a>" } else { "" };
               (format!("{}{}", mutate_type_name(shape_name), lifetime), structure_ownership)
             }
@@ -263,13 +263,28 @@ pub fn get_rust_type<'a>(
     }
 }
 
-fn get_shape_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, shape: &'a Shape) -> Ownership {
-    shape.members
+fn get_shape_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, shape_name: &'a str) -> Ownership {
+    if let Some(ownership) = memo.get(shape_name).cloned() {
+        return ownership;
+    }
+
+    let shape = service.get_shape(shape_name).unwrap();
+
+    // insert a memo record for this shape to avoid infinite recursion
+    // it's always safe to use Ownership::append's identity value here:
+    memo.insert(shape_name, Ownership::default());
+
+    let ownership = shape.members
         .iter()
         .flat_map(|members| members.values())
         .chain(shape.member.as_ref())
         .map(|member| get_member_ownership(memo, service, member))
-        .fold(Ownership::default(), Ownership::append)
+        .fold(Ownership::default(), Ownership::append);
+
+    // now set the real ownership in memo:
+    memo.insert(shape_name, ownership);
+
+    ownership
 }
 
 fn get_member_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, member: &'a Member) -> Ownership {
@@ -277,16 +292,16 @@ fn get_member_ownership<'a>(memo: &mut Memo<'a>, service: &'a Service, member: &
         match member_shape.shape_type {
             ShapeType::String => return Ownership::Borrowed,
             ShapeType::Map => {
-                let key_ownership = get_shape_ownership(memo, service, service.get_shape(member_shape.key_type()).unwrap());
-                let value_ownership = get_shape_ownership(memo, service, service.get_shape(member_shape.value_type()).unwrap());
+                let key_ownership = get_shape_ownership(memo, service, member_shape.key_type());
+                let value_ownership = get_shape_ownership(memo, service, member_shape.value_type());
 
                 key_ownership.append(value_ownership)
             }
             ShapeType::List => {
-                get_shape_ownership(memo, service, service.get_shape(member_shape.member_type()).unwrap())
+                get_shape_ownership(memo, service, member_shape.member_type())
             }
             ShapeType::Structure => {
-                get_shape_ownership(memo, service, member_shape)
+                get_shape_ownership(memo, service, &member.shape)
             }
             _ => Ownership::default()
         }
